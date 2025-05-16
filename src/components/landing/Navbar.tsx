@@ -11,6 +11,7 @@ export function Navbar() {
     { href: '/#testimonials', label: 'Testimonials' },
     { href: '/pricing', label: 'Pricing' },
     { href: '/about-us', label: 'About Us' },
+    { href: '/blog', label: 'Blog' },
     { href: '/#contact', label: 'Contact' },
   ];
 
