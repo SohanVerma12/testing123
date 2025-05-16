@@ -5,7 +5,7 @@ import { Container } from '@/components/landing/Container';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Check, X, Lightbulb, Zap, Cloud, BarChart3, Phone, Package, Settings, PlayCircle, Quote as QuoteIcon, HelpCircle, Rocket, MessageCircle } from 'lucide-react';
+import { Check, X, Lightbulb, Zap, Cloud, BarChart3, Phone, Package, Settings, PlayCircle, Quote as QuoteIcon, HelpCircle, Rocket, MessageCircle, ReceiptText, Globe, Link2, CheckCircle2 } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -39,20 +39,6 @@ const includedInAllPlansItems = [
   'Free Training for Staff',
   '24/7 Access to Help Center',
 ];
-
-const addonsItems = [
-  { icon: ReceiptText, title: 'KOT Printers & Hardware Setup' },
-  { icon: Globe, title: 'Website for Online Orders' },
-  { icon: Package, title: 'Warehouse & Franchise Modules' },
-  { icon: Link2, title: 'ERP/Accounting Integrations' },
-  { icon: Settings, title: 'Custom API Access for large enterprises' },
-];
-// Re-define icons that might have name conflicts or were not imported.
-// Using existing ones from lucide-react that fit.
-const ReceiptText = Lightbulb; // Placeholder, choose appropriate
-const Globe = Lightbulb; // Placeholder
-const Link2 = Lightbulb; // Placeholder
-
 
 const faqItems = [
   { q: 'Can I upgrade my plan later?', a: 'Yes, you can upgrade anytime as your business grows.' },
@@ -181,13 +167,12 @@ export default function PricingPage() {
               Need something extra? We’ve got you covered with a range of add-ons to perfectly fit your unique requirements.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-              {/* Manually defining addon items with correct icons from lucide-react */}
               {[
-                { icon: ReceiptText, title: 'KOT Printers & Hardware Setup' }, // Using ReceiptText as a general equipment icon
-                { icon: Globe, title: 'Website for Online Orders' }, // Using Globe
-                { icon: Package, title: 'Warehouse & Franchise Modules' }, // Using Package
-                { icon: Link2, title: 'ERP/Accounting Integrations' }, // Using Link2 for integrations
-                { icon: Settings, title: 'Custom API Access for large enterprises' }, // Using Settings
+                { icon: ReceiptText, title: 'KOT Printers & Hardware Setup' },
+                { icon: Globe, title: 'Website for Online Orders' },
+                { icon: Package, title: 'Warehouse & Franchise Modules' },
+                { icon: Link2, title: 'ERP/Accounting Integrations' },
+                { icon: Settings, title: 'Custom API Access for large enterprises' },
               ].map((item, index) => (
                  <Card key={index} className="p-6 bg-card">
                    <div className="flex items-center space-x-4">
@@ -338,68 +323,3 @@ export default function PricingPage() {
     </div>
   );
 }
-
-// Helper icon components (ensure these are imported if not already available globally)
-// For this example, I'm re-using some from lucide-react or defining placeholders.
-// In a real app, ensure all icons are correctly imported or defined.
-const CheckCircle2 = ({ className }: { className?: string }) => <Check className={cn("h-5 w-5 text-green-500", className)} />;
-// ReceiptText, Globe, Link2 are defined as placeholders above using Lightbulb.
-// Replace with actual icons:
-// import { ReceiptText, Globe, Link2 } from 'lucide-react'; (if they exist or use alternatives)
-
-// For the sake of this example, I'll use existing ones where appropriate.
-// The actual <ReceiptText>, <Globe>, <Link2> might not exist or have different names in lucide-react.
-// Using Lightbulb as a placeholder for missing icons for now.
-// const ReceiptText = Lightbulb;
-// const Globe = Lightbulb;
-// const Link2 = Lightbulb;
-// User should verify and replace these placeholders with actual lucide-react icons or SVGs.
-// I have used existing ones like Package, Settings.
-// For the sake of this specific request, I will ensure the main icons used (Check, X, Lightbulb etc) are from lucide-react.
-// The Addons section icons need to be carefully selected by the user from lucide-react's available set.
-// I will use placeholders as defined above for addonItems to ensure the code compiles,
-// but in a real scenario, specific icons would be chosen.
-// The list of `addonsItems` was redefined to use actual lucide-react icons where possible or placeholders.
-// Corrected to use `Lightbulb` as a placeholder since `ReceiptText`, `Globe`, `Link2` might not be ideal directly or available.
-// The actual code used `ReceiptText, Globe, Link2` directly from lucide-react (which might be fine if they exist).
-// The key is to ensure the icons in `addonItems` are valid `lucide-react` imports.
-// For this response, I'm including the direct usage as in the first definition of `addonsItems`
-// assuming the user will ensure these are valid or replace them. I have added ReceiptText, Globe, Link2 as placeholder icons within the component itself.
-// After re-checking, ReceiptText, Globe, Link2 are valid lucide-react icons.
-// So I will define them in the component for clarity.
-import { ReceiptText as LucideReceiptText, Globe as LucideGlobe, Link2 as LucideLink2 } from 'lucide-react';
-
-const addonIconMapping = {
-  ReceiptText: LucideReceiptText,
-  Globe: LucideGlobe,
-  Package: Package, // Already imported
-  Link2: LucideLink2,
-  Settings: Settings // Already imported
-};
-// The pricing page has been updated to use ReceiptText, Globe, Link2 from lucide-react.
-// I've added them to the import list for clarity.
-// The `addonsItems` list was:
-/*
-const addonsItems = [
-  { icon: ReceiptText, title: 'KOT Printers & Hardware Setup' },
-  { icon: Globe, title: 'Website for Online Orders' },
-  { icon: Package, title: 'Warehouse & Franchise Modules' },
-  { icon: Link2, title: 'ERP/Accounting Integrations' },
-  { icon: Settings, title: 'Custom API Access for large enterprises' },
-];
-*/
-// This should work if ReceiptText, Globe, Link2 are imported. Let's ensure they are.
-// Added `import { Check, X, Lightbulb, Zap, Cloud, BarChart3, Phone, Package, Settings, PlayCircle, Quote as QuoteIcon, HelpCircle, Rocket, MessageCircle, ReceiptText, Globe, Link2 } from 'lucide-react';`
-// This seems correct now. The manual redefinition below it is not needed.
-// Final check: ensure cn is imported from "@/lib/utils" which it is in pricing page.
-// The local redefinition of CheckCircle2 is also fine if preferred over directly using the Lucide one in the loop.
-// The previous `pricingPlans` and `includedInAllPlans` in `src/app/pricing/page.tsx` have been removed and replaced by the new structure.
-// Removed the CheckCircle2 local component as it is imported from lucide-react.
-// Used `Check` from lucide-react for the table.
-// For "What's Included in Every Plan?", I will use `CheckCircle2` for consistency with original implementation.
-import { CheckCircle2 as LucideCheckCircle2 } from 'lucide-react';
-// And use it in the loop for `includedInAllPlansItems`.
-// The `comparisonFeatures` has boolean or string values, the table rendering logic handles this.
-// Looks good.
-
-    
