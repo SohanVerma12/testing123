@@ -7,9 +7,9 @@ import { Menu, MountainIcon } from 'lucide-react';
 export function Navbar() {
   const navItems = [
     { href: '/#features', label: 'Features' },
-    { href: '/#industries', label: 'Industries' },
+    { href: '/industries', label: 'Industries' },
     { href: '/#testimonials', label: 'Testimonials' },
-    { href: '/#pricing', label: 'Pricing' },
+    { href: '/pricing', label: 'Pricing' },
     { href: '/about-us', label: 'About Us' },
     { href: '/#contact', label: 'Contact' },
   ];
