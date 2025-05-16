@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
@@ -5,11 +6,12 @@ import { Menu, MountainIcon } from 'lucide-react';
 
 export function Navbar() {
   const navItems = [
-    { href: '#features', label: 'Features' },
-    { href: '#industries', label: 'Industries' },
-    { href: '#testimonials', label: 'Testimonials' },
-    { href: '#pricing', label: 'Pricing' },
-    { href: '#contact', label: 'Contact' },
+    { href: '/#features', label: 'Features' },
+    { href: '/#industries', label: 'Industries' },
+    { href: '/#testimonials', label: 'Testimonials' },
+    { href: '/#pricing', label: 'Pricing' },
+    { href: '/about-us', label: 'About Us' },
+    { href: '/#contact', label: 'Contact' },
   ];
 
   return (
@@ -32,7 +34,7 @@ export function Navbar() {
         </nav>
         <div className="hidden items-center gap-2 md:flex">
           <Button variant="ghost" asChild>
-            <Link href="#contact">Schedule a Demo</Link>
+            <Link href="/#contact">Schedule a Demo</Link>
           </Button>
         </div>
         <Sheet>
@@ -58,7 +60,7 @@ export function Navbar() {
                 </Link>
               ))}
               <Button className="mt-4" asChild>
-                <Link href="#contact">Schedule a Demo</Link>
+                <Link href="/#contact">Schedule a Demo</Link>
               </Button>
             </div>
           </SheetContent>
