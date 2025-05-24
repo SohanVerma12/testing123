@@ -8,8 +8,9 @@ export function Navbar() {
   const navItems = [
     { href: '/#features', label: 'Features' },
     { href: '/industries', label: 'Industries' },
-    { href: '/#testimonials', label: 'Testimonials' },
     { href: '/pricing', label: 'Pricing' },
+    { href: '/services', label: 'Services' },
+    { href: '/#testimonials', label: 'Testimonials' },
     { href: '/about-us', label: 'About Us' },
     { href: '/blog', label: 'Blog' },
     { href: '/#contact', label: 'Contact' },
