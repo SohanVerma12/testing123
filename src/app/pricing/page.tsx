@@ -44,7 +44,7 @@ const includedInAllPlansItems = [
 const faqItems = [
   { q: 'Can I upgrade my plan later?', a: 'Yes, you can upgrade anytime as your business grows.' },
   { q: 'Is hardware included?', a: 'Hardware is optional and available as an add-on package.' },
-  { q: 'Do you offer a free trial?', a: 'Yes! You can try Petpooja for 7 days absolutely free.' },
+  { q: 'Do you offer a free trial?', a: 'Yes! You can try Another Head for 7 days absolutely free.' },
   { q: 'Is there any setup fee?', a: 'No setup fee for Starter and Pro plans. Enterprise setups may vary.' },
   { q: 'Can I cancel my plan anytime?', a: 'Yes, there are no lock-ins or cancellation penalties.' },
 ];
@@ -116,11 +116,11 @@ export default function PricingPage() {
             </div>
         </Container>
 
-        {/* Section 2: Why Choose Petpooja? */}
+        {/* Section 2: Why Choose Another Head? */}
         <section className="bg-secondary/40 py-16 md:py-24">
           <Container>
             <h2 className="text-3xl font-bold text-center text-foreground sm:text-4xl mb-12">
-              🏆 Why Choose Petpooja?
+              🏆 Why Choose Another Head?
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {whyChooseItems.map((item) => (
@@ -196,15 +196,15 @@ export default function PricingPage() {
         {/* Section 5: Product Demo / Walkthrough */}
         <Container id="demo-video" className="py-16 md:py-24">
           <h2 className="text-3xl font-bold text-center text-foreground sm:text-4xl mb-4">
-            🎬 See Petpooja in Action
+            🎬 See Another Head in Action
           </h2>
           <p className="text-center text-lg text-foreground/75 mb-10 max-w-2xl mx-auto">
-            Still deciding? Watch our 2-minute product tour to see how Petpooja works in real restaurants.
+            Still deciding? Watch our 2-minute product tour to see how Another Head works in real restaurants.
           </p>
           <div className="relative aspect-video max-w-3xl mx-auto rounded-xl shadow-2xl overflow-hidden group border border-primary/30">
             <Image
               src="https://placehold.co/1280x720.png"
-              alt="Petpooja Product Demo Video Thumbnail"
+              alt="Another Head Product Demo Video Thumbnail"
               layout="fill"
               objectFit="cover"
               data-ai-hint="software demo video"
@@ -234,7 +234,7 @@ export default function PricingPage() {
               <Card className="p-6 bg-card shadow-lg">
                 <QuoteIcon className="h-8 w-8 text-primary/70 mb-4" />
                 <p className="text-lg text-foreground/80 italic mb-4">
-                  “Petpooja helped us reduce order errors and increase table turnover by 30%.”
+                  “Another Head helped us reduce order errors and increase table turnover by 30%.”
                 </p>
                 <p className="font-semibold text-foreground">Suresh Mehta</p>
                 <p className="text-sm text-foreground/70">Owner, Mehta’s Café (Mumbai)</p>
@@ -242,7 +242,7 @@ export default function PricingPage() {
               <Card className="p-6 bg-card shadow-lg">
                 <QuoteIcon className="h-8 w-8 text-primary/70 mb-4" />
                 <p className="text-lg text-foreground/80 italic mb-4">
-                  “I manage 8 outlets from one dashboard thanks to Petpooja.”
+                  “I manage 8 outlets from one dashboard thanks to Another Head.”
                 </p>
                 <p className="font-semibold text-foreground">Priya Nair</p>
                 <p className="text-sm text-foreground/70">Franchise Owner, South Spice Express</p>
@@ -303,7 +303,7 @@ export default function PricingPage() {
              Start managing your restaurant the smart way.
             </h2>
             <p className="text-lg text-foreground/80 max-w-2xl mx-auto mb-6">
-             Join 50,000+ restaurants already using Petpooja.
+             Join 50,000+ restaurants already using Another Head.
             </p>
              <div className="flex items-center justify-center space-x-4 text-sm text-green-600 mb-8">
                 <span>✅ No credit card required</span>

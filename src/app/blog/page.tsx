@@ -55,7 +55,7 @@ const trendingTopics = [
   'Best CRM tools for small cafés',
   'Cost breakdown: Cloud Kitchen vs Dine-in',
   'Billing software checklist for 2025',
-  'How Petpooja clients save ₹20K/month in ops cost',
+  'How Another Head clients save ₹20K/month in ops cost',
   '5 Marketing Tricks to Double Walk-ins',
 ];
 
@@ -157,7 +157,7 @@ export default function BlogPage() {
               <Mail className="h-12 w-12 text-primary mx-auto mb-4" />
               <h2 className="text-2xl font-bold text-foreground mb-2">Subscribe to the Blog</h2>
               <p className="text-foreground/75 mb-6">
-                Stay ahead of your competition. Join 15,000+ foodpreneurs who receive monthly insights, playbooks & product tips from Petpooja.
+                Stay ahead of your competition. Join 15,000+ foodpreneurs who receive monthly insights, playbooks & product tips from Another Head.
               </p>
               <form className="flex flex-col sm:flex-row gap-3">
                 <Input type="email" placeholder="Enter your email" className="flex-grow text-base" aria-label="Email for subscription"/>
@@ -167,12 +167,12 @@ export default function BlogPage() {
           </Card>
         </Container>
 
-        {/* Why Follow Petpooja Blog Section */}
+        {/* Why Follow Another Head Blog Section */}
         <section className="bg-secondary/40 py-16 md:py-20">
           <Container>
             <div className="text-center mb-12">
               <Brain className="h-12 w-12 text-primary mx-auto mb-4" />
-              <h2 className="text-3xl font-bold text-foreground sm:text-4xl">Why Follow Petpooja Blog?</h2>
+              <h2 className="text-3xl font-bold text-foreground sm:text-4xl">Why Follow Another Head Blog?</h2>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               {whyFollowItems.map((item) => (
@@ -210,7 +210,7 @@ export default function BlogPage() {
         <section className="py-20 md:py-28 bg-gradient-to-t from-primary/10 to-background">
           <Container className="text-center">
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-6">
-              Discover how Petpooja can transform your business
+              Discover how Another Head can transform your business
             </h2>
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-6 text-lg text-green-600 mb-10">
               <span className="flex items-center"><CheckCircle2 className="h-6 w-6 mr-2"/>One POS for billing, orders & analytics</span>

@@ -8,7 +8,7 @@ export function DemoVideoSection() {
     <Container id="demo" className="bg-secondary/30">
       <div className="text-center mb-12 md:mb-16">
         <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl md:text-5xl">
-          See Petpooja in Action
+          See Another Head in Action
         </h2>
         <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/70">
           Watch a quick tour of our powerful restaurant management software and discover how it can transform your business.
@@ -17,7 +17,7 @@ export function DemoVideoSection() {
       <div className="relative aspect-video max-w-4xl mx-auto rounded-xl shadow-2xl overflow-hidden group">
         <Image
           src="https://placehold.co/1280x720.png"
-          alt="Petpooja Product Demo Video Thumbnail"
+          alt="Another Head Product Demo Video Thumbnail"
           layout="fill"
           objectFit="cover"
           data-ai-hint="software demo video"

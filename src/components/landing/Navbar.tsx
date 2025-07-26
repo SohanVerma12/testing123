@@ -2,7 +2,27 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Menu, MountainIcon } from 'lucide-react';
+import { Menu } from 'lucide-react';
+
+const AHLogo = () => (
+  <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className="h-6 w-6 text-primary"
+  >
+    <path
+      d="M4 18.5V5.5H8.5L12 12L15.5 5.5H20V18.5H16V10L12 17L8 10V18.5H4Z"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinejoin="round"
+      strokeLinecap="round"
+    />
+  </svg>
+);
+
 
 export function Navbar() {
   const navItems = [
@@ -20,8 +40,8 @@ export function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2">
-          <MountainIcon className="h-6 w-6 text-primary" />
-          <span className="text-xl font-bold">Petpooja</span>
+          <AHLogo />
+          <span className="text-xl font-bold">Another Head</span>
         </Link>
         <nav className="hidden items-center gap-6 md:flex">
           {navItems.map((item) => (
@@ -49,8 +69,8 @@ export function Navbar() {
           <SheetContent side="right">
             <div className="grid gap-4 p-4">
             <Link href="/" className="flex items-center gap-2 mb-4">
-              <MountainIcon className="h-6 w-6 text-primary" />
-              <span className="text-xl font-bold">Petpooja</span>
+              <AHLogo />
+              <span className="text-xl font-bold">Another Head</span>
             </Link>
               {navItems.map((item) => (
                 <Link

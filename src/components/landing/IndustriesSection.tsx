@@ -19,7 +19,7 @@ export function IndustriesSection() {
           Powering All Types of Food Businesses
         </h2>
         <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/70">
-          Whether you run a cozy café or a multi-chain enterprise, Petpooja adapts to your unique needs.
+          Whether you run a cozy café or a multi-chain enterprise, Another Head adapts to your unique needs.
         </p>
       </div>
       <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-6">

@@ -32,7 +32,7 @@ export default function AboutUsPage() {
         <section className="py-20 md:py-28 bg-gradient-to-b from-primary/10 to-background">
           <Container className="text-center">
             <h1 className="text-5xl font-extrabold tracking-tight text-foreground sm:text-6xl md:text-7xl">
-              About <span className="text-primary">Petpooja</span>
+              About <span className="text-primary">Another Head</span>
             </h1>
             <p className="mt-6 text-xl text-foreground/80 max-w-3xl mx-auto sm:text-2xl">
               Empowering Restaurants with Smart, Intuitive Technology
@@ -46,7 +46,7 @@ export default function AboutUsPage() {
             <h2 className="text-3xl font-bold text-foreground sm:text-4xl mb-8">Who We Are</h2>
             <div className="text-lg text-foreground/75 space-y-6">
               <p>
-                Petpooja is India’s leading Restaurant Management Platform, trusted by over <strong className="text-primary">50,000+ restaurants</strong> across 150+ cities. We are a dynamic team of innovators, thinkers, and problem-solvers passionate about simplifying the complexities of restaurant operations.
+                Another Head is India’s leading Restaurant Management Platform, trusted by over <strong className="text-primary">50,000+ restaurants</strong> across 150+ cities. We are a dynamic team of innovators, thinkers, and problem-solvers passionate about simplifying the complexities of restaurant operations.
               </p>
               <p>
                 Our comprehensive, all-in-one POS system—from billing and inventory to customer engagement and advanced analytics—is meticulously designed to empower food businesses of all sizes to scale, succeed, and delight their customers.
@@ -67,7 +67,7 @@ export default function AboutUsPage() {
                 </p>
               </div>
               <p className="mt-8 text-lg text-foreground/75">
-                We believe technology should be a restaurant owner's strongest ally—not a burden. That’s why we’ve built Petpooja to be intuitive, flexible, and incredibly powerful, adapting to the unique needs of every kind of food outlet, from quaint cafes to sprawling chains.
+                We believe technology should be a restaurant owner's strongest ally—not a burden. That’s why we’ve built Another Head to be intuitive, flexible, and incredibly powerful, adapting to the unique needs of every kind of food outlet, from quaint cafes to sprawling chains.
               </p>
             </div>
           </Container>
@@ -79,7 +79,7 @@ export default function AboutUsPage() {
             <h2 className="text-3xl font-bold text-foreground sm:text-4xl mb-8">Our Journey</h2>
             <div className="text-lg text-foreground/75 space-y-6">
               <p>
-                What began in <strong className="text-primary">2011</strong> as a bold vision to modernize restaurant technology has evolved into a robust, industry-leading platform. Today, Petpooja supports thousands of diverse food businesses — from cozy cafés and innovative food trucks to large-scale enterprise QSR chains and dynamic cloud kitchens.
+                What began in <strong className="text-primary">2011</strong> as a bold vision to modernize restaurant technology has evolved into a robust, industry-leading platform. Today, Another Head supports thousands of diverse food businesses — from cozy cafés and innovative food trucks to large-scale enterprise QSR chains and dynamic cloud kitchens.
               </p>
               <p>
                 Driven by relentless innovation, unwavering customer support, and deep-seated industry knowledge, we continue to revolutionize how restaurants operate and thrive in a competitive landscape.
@@ -92,9 +92,9 @@ export default function AboutUsPage() {
         <section className="bg-primary/5 py-16 md:py-24">
           <Container>
             <div className="text-center mb-12 md:mb-16">
-              <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl md:text-5xl">Why Choose Petpooja?</h2>
+              <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl md:text-5xl">Why Choose Another Head?</h2>
               <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/70">
-                Discover the Petpooja advantage for your restaurant.
+                Discover the Another Head advantage for your restaurant.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -161,10 +161,10 @@ export default function AboutUsPage() {
         <section className="py-20 md:py-28 bg-gradient-to-t from-primary/10 to-background">
           <Container className="text-center">
             <h2 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl mb-6">
-              Join the Petpooja Movement
+              Join the Another Head Movement
             </h2>
             <p className="mt-4 text-xl text-foreground/80 max-w-3xl mx-auto mb-10">
-              Whether you're launching a new café or scaling a multi-city food chain, Petpooja is your dedicated partner in success. Let’s innovate the future of food service — together.
+              Whether you're launching a new café or scaling a multi-city food chain, Another Head is your dedicated partner in success. Let’s innovate the future of food service — together.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 text-lg font-semibold">

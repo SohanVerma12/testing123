@@ -54,7 +54,7 @@ const industriesData: IndustryDetail[] = [
     id: 'food-trucks',
     icon: Truck,
     title: 'Food Trucks',
-    description: "Take your mobile kitchen anywhere – Petpooja works offline too.",
+    description: "Take your mobile kitchen anywhere – Another Head works offline too.",
     features: [
       "Offline billing mode with auto-sync",
       "Compact POS interface for small screens",
@@ -126,7 +126,7 @@ const integrationCategories = [
 
 const successStories = [
   {
-    quote: "Petpooja helped us streamline 12 outlets with one login – saved us 30+ man hours weekly!",
+    quote: "Another Head helped us streamline 12 outlets with one login – saved us 30+ man hours weekly!",
     name: "Ajay Shah",
     title: "CEO, Bombay Bowl"
   },
@@ -149,7 +149,7 @@ export default function IndustriesPage() {
               Empowering Every Type of Food Business
             </h1>
             <p className="mt-6 text-lg text-foreground/80 max-w-3xl mx-auto sm:text-xl">
-              Whether you're serving on a plate, in a box, or on the go — Petpooja powers your operations, simplifies your workflows, and drives profitability.
+              Whether you're serving on a plate, in a box, or on the go — Another Head powers your operations, simplifies your workflows, and drives profitability.
             </p>
           </Container>
         </section>
@@ -279,7 +279,7 @@ export default function IndustriesPage() {
              Whatever you serve, we’re here to serve you.
             </h2>
             <p className="text-lg text-foreground/80 max-w-2xl mx-auto mb-6">
-             Join 55,000+ businesses already running on Petpooja.
+             Join 55,000+ businesses already running on Another Head.
             </p>
              <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-4 text-md text-green-600 mb-8">
                 <span className="flex items-center"><CheckCircle2 className="h-5 w-5 mr-2"/>Easy to Set Up</span>
@@ -301,4 +301,3 @@ export default function IndustriesPage() {
     </div>
   );
 }
-

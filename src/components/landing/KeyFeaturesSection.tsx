@@ -43,7 +43,7 @@ export function KeyFeaturesSection() {
           Everything Your Restaurant Needs
         </h2>
         <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/70">
-          Petpooja offers a comprehensive suite of tools to manage and grow your food business efficiently.
+          Another Head offers a comprehensive suite of tools to manage and grow your food business efficiently.
         </p>
       </div>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">

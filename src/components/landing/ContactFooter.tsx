@@ -23,7 +23,7 @@ export function ContactFooter() {
             </p>
             <div className="mt-8 space-y-4">
               <h3 className="text-xl font-semibold text-white">Contact Information</h3>
-              <p>Email: <a href="mailto:sales@petpooja.com" className="text-primary hover:underline">sales@petpooja.com</a></p>
+              <p>Email: <a href="mailto:sales@anotherhead.com" className="text-primary hover:underline">sales@anotherhead.com</a></p>
               <p>Phone: <a href="tel:+911234567890" className="text-primary hover:underline">+91 12345 67890</a></p>
               <Button variant="outline" className="bg-transparent border-primary text-primary hover:bg-primary hover:text-white" asChild>
                 <a href="https://wa.me/911234567890" target="_blank" rel="noopener noreferrer">
@@ -78,7 +78,7 @@ export function ContactFooter() {
         </div>
 
         <div className="mt-16 border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm text-gray-500">&copy; {currentYear} Petpooja. All rights reserved.</p>
+          <p className="text-sm text-gray-500">&copy; {currentYear} Another Head. All rights reserved.</p>
           <div className="flex space-x-4 mt-4 md:mt-0">
             <span className="flex items-center text-sm text-gray-500">
               <ShieldCheck className="h-4 w-4 mr-1 text-green-500" /> ISO Certified

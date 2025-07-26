@@ -18,7 +18,7 @@ export function IntegrationsSection() {
           Seamless Integrations
         </h2>
         <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/70">
-          Connect Petpooja with your favorite tools to streamline operations and enhance customer experience.
+          Connect Another Head with your favorite tools to streamline operations and enhance customer experience.
         </p>
       </div>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center">

@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Petpooja Simplified | Restaurant Management Software',
-  description: 'One POS to Manage it All. From billing to inventory, Petpooja simplifies every step of running your restaurant.',
+  title: 'Another Head Simplified | Restaurant Management Software',
+  description: 'One POS to Manage it All. From billing to inventory, Another Head simplifies every step of running your restaurant.',
 };
 
 export default function RootLayout({

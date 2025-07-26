@@ -10,7 +10,7 @@ export function HeroSection() {
         One <span className="text-primary">POS</span> to Manage it All
       </h1>
       <p className="mt-6 max-w-3xl mx-auto text-lg text-foreground/80 sm:text-xl md:text-2xl">
-        From billing to inventory, Petpooja simplifies every step of running your restaurant.
+        From billing to inventory, Another Head simplifies every step of running your restaurant.
       </p>
       <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
         <Button size="lg" asChild>
@@ -23,7 +23,7 @@ export function HeroSection() {
       <div className="mt-12 sm:mt-16 lg:mt-20 relative aspect-[16/9] w-full max-w-4xl mx-auto rounded-xl shadow-2xl overflow-hidden">
         <Image
           src="https://placehold.co/1200x675.png"
-          alt="Petpooja Dashboard Illustration"
+          alt="Another Head Dashboard Illustration"
           layout="fill"
           objectFit="cover"
           data-ai-hint="software dashboard restaurant"
