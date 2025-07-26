@@ -26,6 +26,7 @@ const AHLogo = () => (
 
 export function Navbar() {
   const navItems = [
+    { href: '/home2', label: 'Home2' },
     { href: '/#features', label: 'Features' },
     { href: '/industries', label: 'Industries' },
     { href: '/pricing', label: 'Pricing' },
@@ -37,7 +38,7 @@ export function Navbar() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-black/50 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2">
           <AHLogo />
@@ -48,25 +49,25 @@ export function Navbar() {
             <Link
               key={item.label}
               href={item.href}
-              className="text-sm font-medium text-foreground/70 transition-colors hover:text-foreground"
+              className="text-sm font-medium text-gray-300 transition-colors hover:text-white"
             >
               {item.label}
             </Link>
           ))}
         </nav>
         <div className="hidden items-center gap-2 md:flex">
-          <Button variant="ghost" asChild>
+          <Button variant="ghost" className="text-gray-300 hover:text-white hover:bg-white/10" asChild>
             <Link href="/#contact">Schedule a Demo</Link>
           </Button>
         </div>
         <Sheet>
           <SheetTrigger asChild>
-            <Button variant="outline" size="icon" className="md:hidden">
+            <Button variant="outline" size="icon" className="md:hidden bg-transparent border-gray-700 hover:bg-white/10">
               <Menu className="h-6 w-6" />
               <span className="sr-only">Toggle navigation menu</span>
             </Button>
           </SheetTrigger>
-          <SheetContent side="right">
+          <SheetContent side="right" className="bg-gray-900 border-l-gray-800">
             <div className="grid gap-4 p-4">
             <Link href="/" className="flex items-center gap-2 mb-4">
               <AHLogo />
@@ -76,7 +77,7 @@ export function Navbar() {
                 <Link
                   key={item.label}
                   href={item.href}
-                  className="text-lg font-medium text-foreground/80 transition-colors hover:text-foreground"
+                  className="text-lg font-medium text-gray-300 transition-colors hover:text-white"
                 >
                   {item.label}
                 </Link>
@@ -91,3 +92,5 @@ export function Navbar() {
     </header>
   );
 }
+
+    
