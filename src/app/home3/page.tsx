@@ -1,4 +1,3 @@
-
 'use client';
 
 import Link from 'next/link';
@@ -7,9 +6,10 @@ import { ContactFooter } from '@/components/landing/ContactFooter';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { 
-  ArrowRight, Cpu, ShieldCheck, DatabaseZap, Bot, CloudCog, Code, Star, Check, GitBranch
+  ArrowRight, Cpu, ShieldCheck, DatabaseZap, Bot, CloudCog, Code, Star, Check, GitBranch, Briefcase, BarChart, FileText, Share2
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import Image from 'next/image';
 
 export default function Home3Page() {
   const techPillars = [
@@ -62,6 +62,38 @@ export default function Home3Page() {
       icon: GitBranch,
       color: 'indigo'
     },
+  ];
+  
+  const useCases = [
+    {
+      icon: Briefcase,
+      title: 'For Enterprise',
+      description: 'Scale your operations with robust, secure, and compliant technology designed for large-scale deployments.'
+    },
+    {
+      icon: BarChart,
+      title: 'For Analytics',
+      description: 'Transform raw data into actionable insights with high-performance databases and AI-powered analysis tools.'
+    },
+    {
+      icon: FileText,
+      title: 'For Content Generation',
+      description: 'Automate content creation, from marketing copy to detailed reports, using our advanced Generative AI suite.'
+    },
+    {
+      icon: Share2,
+      title: 'For System Integration',
+      description: 'Seamlessly connect disparate software and services into a unified workflow with our powerful integration hub.'
+    }
+  ];
+
+  const trustedLogos = [
+    { name: 'QuantumLeap', logoUrl: 'https://placehold.co/150x50.png', hint: 'tech company logo' },
+    { name: 'Stellar Solutions', logoUrl: 'https://placehold.co/150x50.png', hint: 'tech startup logo' },
+    { name: 'Apex Innovations', logoUrl: 'https://placehold.co/150x50.png', hint: 'innovation company logo' },
+    { name: 'Nova Dynamics', logoUrl: 'https://placehold.co/150x50.png', hint: 'dynamics tech logo' },
+    { name: 'FusionWorks', logoUrl: 'https://placehold.co/150x50.png', hint: 'software company logo' },
+    { name: 'Cognitive Corp', logoUrl: 'https://placehold.co/150x50.png', hint: 'ai company logo' },
   ];
 
   return (
@@ -145,6 +177,54 @@ export default function Home3Page() {
             </Card>
           ))}
         </div>
+      </section>
+      
+      {/* Use Cases Section (White Background) */}
+      <section className="bg-white py-24 sm:py-32">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-base font-semibold leading-7 text-blue-600">APPLICATIONS</h2>
+              <p className="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">How Our Technology Is Used</p>
+              <p className="mt-6 max-w-2xl mx-auto text-lg leading-8 text-gray-600">
+                Our flexible and powerful platform can be adapted to solve a wide range of business challenges.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+              {useCases.map((useCase) => (
+                <div key={useCase.title} className="text-center">
+                  <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 text-blue-600 mb-6">
+                    <useCase.icon className="h-8 w-8" />
+                  </div>
+                  <h3 className="text-2xl font-semibold text-gray-900">{useCase.title}</h3>
+                  <p className="mt-4 text-gray-600">{useCase.description}</p>
+                </div>
+              ))}
+            </div>
+        </div>
+      </section>
+
+      {/* Trusted by Section (White Background) */}
+      <section className="bg-gray-50 py-24 sm:py-32">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-center text-2xl font-semibold leading-8 text-gray-900">
+              Trusted by the world's most innovative companies
+            </h2>
+            <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-x-8 gap-y-10 items-center">
+              {trustedLogos.map((logo) => (
+                <div key={logo.name} className="flex justify-center" title={logo.name}>
+                  <Image
+                    src={logo.logoUrl}
+                    alt={`${logo.name} logo`}
+                    width={150}
+                    height={50}
+                    objectFit="contain"
+                    data-ai-hint={logo.hint}
+                    className="opacity-60 hover:opacity-100 transition-opacity duration-300"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
       </section>
 
       {/* Why Our Tech Section */}
