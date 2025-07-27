@@ -27,6 +27,7 @@ const AHLogo = () => (
 export function Navbar() {
   const navItems = [
     { href: '/home2', label: 'Home2' },
+    { href: '/home3', label: 'Home3' },
     { href: '/#features', label: 'Features' },
     { href: '/industries', label: 'Industries' },
     { href: '/pricing', label: 'Pricing' },
