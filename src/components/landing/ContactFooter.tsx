@@ -4,91 +4,111 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Container } from '@/components/landing/Container';
 import { Linkedin, Facebook, Instagram, Twitter, MessageCircle, ShieldCheck } from 'lucide-react';
 
 export function ContactFooter() {
   const currentYear = new Date().getFullYear();
+  
+  const AHLogo = () => (
+    <svg
+      width="32"
+      height="32"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="h-8 w-8 text-primary"
+    >
+      <path
+        d="M4 18.5V5.5H8.5L12 12L15.5 5.5H20V18.5H16V10L12 17L8 10V18.5H4Z"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinejoin="round"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+
 
   return (
-    <footer id="contact" className="bg-gray-900 text-gray-300">
-      <Container className="py-16 md:py-20 lg:py-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
-          <div>
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+    <footer id="contact" className="bg-secondary/50 border-t">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 lg:py-24">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
+          <div className="lg:col-span-5">
+            <div className="mb-6">
+              <Link href="/" className="flex items-center gap-2">
+                <AHLogo />
+                <span className="text-2xl font-bold text-foreground">Another Head</span>
+              </Link>
+            </div>
+            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
               Ready to Elevate Your Restaurant?
             </h2>
-            <p className="mt-4 text-lg text-gray-400">
+            <p className="mt-4 text-lg text-muted-foreground">
               Get in touch for a personalized demo or any queries. Our team is here to help you succeed.
             </p>
-            <div className="mt-8 space-y-4">
-              <h3 className="text-xl font-semibold text-white">Contact Information</h3>
-              <p>Email: <a href="mailto:sales@anotherhead.com" className="text-primary hover:underline">sales@anotherhead.com</a></p>
-              <p>Phone: <a href="tel:+911234567890" className="text-primary hover:underline">+91 12345 67890</a></p>
-              <Button variant="outline" className="bg-transparent border-primary text-primary hover:bg-primary hover:text-white" asChild>
-                <a href="https://wa.me/911234567890" target="_blank" rel="noopener noreferrer">
-                  <MessageCircle className="mr-2 h-5 w-5" /> Chat on WhatsApp
-                </a>
-              </Button>
+            <div className="mt-8 flex space-x-4">
+              <Link href="#" className="text-muted-foreground hover:text-primary"><Linkedin className="h-6 w-6" /></Link>
+              <Link href="#" className="text-muted-foreground hover:text-primary"><Facebook className="h-6 w-6" /></Link>
+              <Link href="#" className="text-muted-foreground hover:text-primary"><Instagram className="h-6 w-6" /></Link>
+              <Link href="#" className="text-muted-foreground hover:text-primary"><Twitter className="h-6 w-6" /></Link>
             </div>
-            <div className="mt-8">
-              <h3 className="text-xl font-semibold text-white">Follow Us</h3>
-              <div className="mt-4 flex space-x-4">
-                <Link href="#" className="text-gray-400 hover:text-primary"><Linkedin className="h-6 w-6" /></Link>
-                <Link href="#" className="text-gray-400 hover:text-primary"><Facebook className="h-6 w-6" /></Link>
-                <Link href="#" className="text-gray-400 hover:text-primary"><Instagram className="h-6 w-6" /></Link>
-                <Link href="#" className="text-gray-400 hover:text-primary"><Twitter className="h-6 w-6" /></Link>
+          </div>
+
+          <div className="lg:col-span-7">
+            <Card className="p-8 bg-card rounded-2xl shadow-lg">
+            <form className="space-y-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                  <Label htmlFor="name" className="text-foreground/90">Full Name</Label>
+                  <Input type="text" id="name" name="name" required className="mt-2" />
+                </div>
+                <div>
+                  <Label htmlFor="email" className="text-foreground/90">Email Address</Label>
+                  <Input type="email" id="email" name="email" required className="mt-2" />
+                </div>
               </div>
-            </div>
-          </div>
-
-          <form className="space-y-6 p-8 bg-gray-800 rounded-lg shadow-xl">
-            <div>
-              <Label htmlFor="name" className="text-gray-300">Full Name</Label>
-              <Input type="text" id="name" name="name" required className="mt-1 bg-gray-700 border-gray-600 text-white focus:ring-primary focus:border-primary" />
-            </div>
-            <div>
-              <Label htmlFor="email" className="text-gray-300">Email Address</Label>
-              <Input type="email" id="email" name="email" required className="mt-1 bg-gray-700 border-gray-600 text-white focus:ring-primary focus:border-primary" />
-            </div>
-            <div>
-              <Label htmlFor="businessType" className="text-gray-300">Business Type</Label>
-              <Select name="businessType">
-                <SelectTrigger id="businessType" className="mt-1 bg-gray-700 border-gray-600 text-white focus:ring-primary focus:border-primary">
-                  <SelectValue placeholder="Select business type" />
-                </SelectTrigger>
-                <SelectContent className="bg-gray-700 border-gray-600 text-white">
-                  <SelectItem value="restaurant">Restaurant</SelectItem>
-                  <SelectItem value="cafe">Café</SelectItem>
-                  <SelectItem value="food_truck">Food Truck</SelectItem>
-                  <SelectItem value="cloud_kitchen">Cloud Kitchen</SelectItem>
-                  <SelectItem value="qsr">QSR</SelectItem>
-                  <SelectItem value="other">Other</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-            <div>
-              <Label htmlFor="message" className="text-gray-300">Message</Label>
-              <Textarea id="message" name="message" rows={4} required className="mt-1 bg-gray-700 border-gray-600 text-white focus:ring-primary focus:border-primary" />
-            </div>
-            <div>
-              <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-white">Send Message</Button>
-            </div>
-          </form>
-        </div>
-
-        <div className="mt-16 border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm text-gray-500">&copy; {currentYear} Another Head. All rights reserved.</p>
-          <div className="flex space-x-4 mt-4 md:mt-0">
-            <span className="flex items-center text-sm text-gray-500">
-              <ShieldCheck className="h-4 w-4 mr-1 text-green-500" /> ISO Certified
-            </span>
-            <span className="flex items-center text-sm text-gray-500">
-              <ShieldCheck className="h-4 w-4 mr-1 text-green-500" /> PCI DSS Compliant
-            </span>
+              <div>
+                <Label htmlFor="businessType" className="text-foreground/90">Business Type</Label>
+                <Select name="businessType">
+                  <SelectTrigger id="businessType" className="mt-2">
+                    <SelectValue placeholder="Select business type" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="restaurant">Restaurant</SelectItem>
+                    <SelectItem value="cafe">Café</SelectItem>
+                    <SelectItem value="food_truck">Food Truck</SelectItem>
+                    <SelectItem value="cloud_kitchen">Cloud Kitchen</SelectItem>
+                    <SelectItem value="qsr">QSR</SelectItem>
+                    <SelectItem value="other">Other</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+              <div>
+                <Label htmlFor="message" className="text-foreground/90">Message</Label>
+                <Textarea id="message" name="message" rows={4} required className="mt-2" />
+              </div>
+              <div>
+                <Button type="submit" className="w-full" size="lg">Send Message</Button>
+              </div>
+            </form>
+            </Card>
           </div>
         </div>
-      </Container>
+
+        <div className="mt-16 border-t border-border pt-8 flex flex-col sm:flex-row justify-between items-center">
+          <p className="text-sm text-muted-foreground">&copy; {currentYear} Another Head. All rights reserved.</p>
+          <div className="flex space-x-4 mt-4 sm:mt-0">
+             <Link href="#" className="text-sm text-muted-foreground hover:text-foreground">Privacy Policy</Link>
+             <Link href="#" className="text-sm text-muted-foreground hover:text-foreground">Terms of Service</Link>
+          </div>
+        </div>
+      </div>
     </footer>
   );
+}
+
+// Dummy Card component to resolve compile error. 
+// Assumes a Card component exists in the project.
+function Card({ children, className }: { children: React.ReactNode, className?: string }) {
+    return <div className={className}>{children}</div>
 }
