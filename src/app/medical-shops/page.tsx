@@ -7,7 +7,7 @@ import { Container } from '@/components/landing/Container';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import Image from 'next/image';
-import { CheckCircle2, ArrowRight, Pill, FileText, Package, Search, Bell, Shield } from 'lucide-react';
+import { CheckCircle2, ArrowRight, Pill, FileText, Package, Search, Bell, Shield, BarChart3 } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export default function MedicalShopsPage() {
