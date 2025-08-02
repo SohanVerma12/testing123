@@ -144,11 +144,11 @@ export default function IndustriesPage() {
       <main className="flex-grow">
         {/* Header Section */}
         <section className="py-20 md:py-28 bg-gradient-to-b from-primary/10 to-background">
-          <Container className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl">
+          <Container className="text-center py-12 md:py-16">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-foreground">
               Empowering Every Type of Food Business
             </h1>
-            <p className="mt-6 text-lg text-foreground/80 max-w-3xl mx-auto sm:text-xl">
+            <p className="mt-6 text-lg sm:text-xl text-foreground/80 max-w-3xl mx-auto">
               Whether you're serving on a plate, in a box, or on the go — Another Head powers your operations, simplifies your workflows, and drives profitability.
             </p>
           </Container>
@@ -171,11 +171,11 @@ export default function IndustriesPage() {
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-                <Card className="bg-card/50 shadow-lg">
-                  <CardHeader>
+                <Card className="bg-card/50 shadow-lg p-6">
+                  <CardHeader className="p-0 pb-4">
                     <CardTitle className="text-xl text-primary">Key Features</CardTitle>
                   </CardHeader>
-                  <CardContent>
+                  <CardContent className="p-0">
                     <ul className="space-y-3">
                       {industry.features.map((feature, idx) => (
                         <li key={idx} className="flex items-start">
@@ -186,11 +186,11 @@ export default function IndustriesPage() {
                     </ul>
                   </CardContent>
                 </Card>
-                <Card className="bg-card/50 shadow-lg">
-                  <CardHeader>
+                <Card className="bg-card/50 shadow-lg p-6">
+                  <CardHeader className="p-0 pb-4">
                     <CardTitle className="text-xl text-primary">Perfect for</CardTitle>
                   </CardHeader>
-                  <CardContent>
+                  <CardContent className="p-0">
                     <ul className="space-y-3">
                       {industry.perfectFor.map((item, idx) => (
                         <li key={idx} className="flex items-start">
@@ -202,7 +202,7 @@ export default function IndustriesPage() {
                   </CardContent>
                 </Card>
               </div>
-              {index < industriesData.length - 1 && <Separator className="my-16" />}
+              {index < industriesData.length - 1 && <Separator className="my-12 md:my-16" />}
             </section>
           ))}
         </Container>
@@ -253,7 +253,7 @@ export default function IndustriesPage() {
 
         {/* Not Sure Which Plan Suits Your Business? Section */}
         <section className="bg-primary/10 py-20 md:py-28">
-          <Container className="text-center">
+          <Container className="text-center py-12 md:py-16">
             <HelpCircle className="h-16 w-16 text-primary mx-auto mb-6" />
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-6">
               Not Sure Which Solution Suits Your Business?
@@ -262,10 +262,10 @@ export default function IndustriesPage() {
               Let us help you find the right fit for your food business. Our experts are here to guide you.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 text-lg font-semibold">
+              <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground w-full sm:w-auto px-8 py-3 text-lg font-semibold">
                 <Link href="/#contact">Book a Free Consultation</Link>
               </Button>
-              <Button size="lg" variant="outline" asChild className="border-primary text-primary hover:bg-primary/5 px-8 py-3 text-lg font-semibold">
+              <Button size="lg" variant="outline" asChild className="border-primary text-primary hover:bg-primary/5 w-full sm:w-auto px-8 py-3 text-lg font-semibold">
                 <Link href="/#contact">Talk to Sales</Link>
               </Button>
             </div>
@@ -287,10 +287,10 @@ export default function IndustriesPage() {
                 <span className="flex items-center"><CheckCircle2 className="h-5 w-5 mr-2"/>Proven ROI</span>
             </div>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground px-10 py-4 text-xl font-semibold">
+              <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground w-full sm:w-auto px-10 py-4 text-xl font-semibold">
                 <Link href="/#contact">Schedule a Demo</Link>
               </Button>
-              <Button size="lg" variant="outline" asChild className="border-primary text-primary hover:bg-primary/5 px-10 py-4 text-xl font-semibold">
+              <Button size="lg" variant="outline" asChild className="border-primary text-primary hover:bg-primary/5 w-full sm:w-auto px-10 py-4 text-xl font-semibold">
                 <Link href="/#pricing">Get Started for Free</Link>
               </Button>
             </div>

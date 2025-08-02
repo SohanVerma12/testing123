@@ -114,28 +114,28 @@ export default function ServicesPage() {
       <main className="flex-grow">
         {/* Header Section */}
         <section className="py-20 md:py-28 bg-gradient-to-b from-primary/10 to-background">
-          <Container className="text-center">
+          <Container className="text-center py-12 md:py-16">
             <Settings className="h-16 w-16 text-primary mx-auto mb-6" />
-            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-foreground">
               Full-Spectrum Digital Services to Power Your Brand
             </h1>
-            <p className="mt-6 text-lg text-foreground/80 max-w-3xl mx-auto sm:text-xl">
+            <p className="mt-6 text-lg sm:text-xl text-foreground/80 max-w-3xl mx-auto">
               From websites to digital marketing, we help your business grow with modern tech and design solutions.
             </p>
           </Container>
         </section>
 
         {/* Our Core Services Section */}
-        <Container id="core-services" className="py-16 md:py-20">
+        <Container id="core-services" className="py-16 sm:py-24 md:py-32">
           <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl md:text-5xl">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-foreground">
               Our Core Services
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {coreServices.map((service) => (
               <Card key={service.title} className="flex flex-col text-left shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <CardHeader>
+                <CardHeader className="p-6">
                   <div className="flex items-center mb-4">
                     <div className="p-3 bg-primary/10 rounded-full mr-4">
                       <service.icon className="h-8 w-8 text-primary" />
@@ -144,7 +144,7 @@ export default function ServicesPage() {
                   </div>
                   <CardDescription>{service.description}</CardDescription>
                 </CardHeader>
-                <CardContent className="flex-grow">
+                <CardContent className="flex-grow p-6 pt-0">
                   <ul className="space-y-2">
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start text-sm">
@@ -160,17 +160,17 @@ export default function ServicesPage() {
         </Container>
 
         {/* Our Service Plans Section */}
-        <section className="bg-secondary/40 py-16 md:py-20">
-          <Container id="service-plans">
+        <section className="bg-secondary/40 py-16 sm:py-24 md:py-32">
+          <Container id="service-plans" className="py-0">
             <div className="text-center mb-12 md:mb-16">
-              <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl md:text-5xl">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-foreground">
                 Our Service Plans
               </h2>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
               {servicePlans.map((plan) => (
                 <Card key={plan.name} className={`flex flex-col shadow-xl border-2 ${plan.name === 'Standard Plan – Growth' ? 'border-primary ring-4 ring-primary/20' : 'border-border'}`}>
-                  <CardHeader className="text-center">
+                  <CardHeader className="text-center p-6">
                     <div className={`w-3 h-3 ${plan.badgeColor} rounded-full mx-auto mb-2`}></div>
                     <CardTitle className="text-2xl font-bold">{plan.name}</CardTitle>
                     <CardDescription className="text-sm text-foreground/70 mt-1">Perfect for: {plan.perfectFor}</CardDescription>
@@ -178,7 +178,7 @@ export default function ServicesPage() {
                     <p className="text-xs text-foreground/60">(exclusive of taxes)</p>
                     <p className="text-sm font-medium text-foreground/80 mt-2">Delivery: {plan.delivery}</p>
                   </CardHeader>
-                  <CardContent className="flex-grow">
+                  <CardContent className="flex-grow p-6 pt-0">
                     <p className="font-semibold mb-3 text-foreground/90">What’s Included:</p>
                     <ul className="space-y-2">
                       {plan.features.map((feature, idx) => (
@@ -189,7 +189,7 @@ export default function ServicesPage() {
                       ))}
                     </ul>
                   </CardContent>
-                  <CardFooter>
+                  <CardFooter className="p-6 pt-0">
                     <Button size="lg" className="w-full" variant={plan.name === 'Standard Plan – Growth' ? 'default' : 'outline'} asChild>
                       <Link href="#contact">Consult Us</Link>
                     </Button>
@@ -201,9 +201,9 @@ export default function ServicesPage() {
         </section>
 
         {/* Why Choose Us Section */}
-        <Container id="why-choose-us" className="py-16 md:py-20">
+        <Container id="why-choose-us" className="py-16 sm:py-24 md:py-32">
           <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl md:text-5xl">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-foreground">
               Why Choose Us?
             </h2>
           </div>
@@ -219,18 +219,18 @@ export default function ServicesPage() {
 
         {/* CTA Section */}
         <section className="py-20 md:py-28 bg-gradient-to-t from-primary/10 to-background">
-          <Container className="text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-6">
+          <Container className="text-center py-12 md:py-16">
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground mb-6">
               Ready to Build Your Digital Presence?
             </h2>
             <p className="mt-4 text-lg text-foreground/80 max-w-xl mx-auto mb-10">
               Let’s turn your idea into a high-converting digital experience.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 text-lg font-semibold">
+              <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground w-full sm:w-auto px-8 py-3 text-lg font-semibold">
                 <Link href="#contact"><Calendar className="mr-2 h-5 w-5" /> Book a Free Consultation</Link>
               </Button>
-              <Button size="lg" variant="outline" asChild className="border-primary text-primary hover:bg-primary/5 px-8 py-3 text-lg font-semibold">
+              <Button size="lg" variant="outline" asChild className="border-primary text-primary hover:bg-primary/5 w-full sm:w-auto px-8 py-3 text-lg font-semibold">
                 <a href="tel:1800000XXXX"><Phone className="mr-2 h-5 w-5" /> Or call us at 1800-XXX-XXXX</a>
               </Button>
             </div>

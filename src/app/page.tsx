@@ -90,19 +90,19 @@ export default function HomePage() {
             <div className="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_50%_200px,#C9EBFF,transparent)]"></div>
           </div>
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="text-4xl font-extrabold tracking-tight text-foreground sm:text-6xl md:text-7xl">
+            <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-foreground">
               One <span className="text-primary">POS</span> to Manage it All
             </h1>
-            <p className="mt-6 max-w-3xl mx-auto text-lg text-muted-foreground sm:text-xl md:text-2xl">
+            <p className="mt-6 max-w-3xl mx-auto text-lg sm:text-xl md:text-2xl text-muted-foreground">
               From billing to inventory, Another Head simplifies every step of running your restaurant.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button size="lg" className="px-8 py-3 text-lg font-semibold group" asChild>
+              <Button size="lg" className="w-full sm:w-auto px-8 py-3 text-lg font-semibold group" asChild>
                 <Link href="#contact">
                   Schedule a Demo <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="px-8 py-3 text-lg font-semibold" asChild>
+              <Button size="lg" variant="outline" className="w-full sm:w-auto px-8 py-3 text-lg font-semibold" asChild>
                 <Link href="#pricing">Get Started Free</Link>
               </Button>
             </div>
@@ -121,17 +121,17 @@ export default function HomePage() {
         </section>
 
         {/* Features Section */}
-        <section id="features" className="container mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
-          <div className="text-center mb-16">
+        <section id="features" className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 md:py-32">
+          <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-base font-semibold leading-7 text-primary">Everything You Need</h2>
-            <p className="mt-2 text-4xl font-bold tracking-tight text-foreground sm:text-5xl">A Fully-Featured Platform</p>
+            <p className="mt-2 text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-foreground">A Fully-Featured Platform</p>
             <p className="mt-6 max-w-2xl mx-auto text-lg leading-8 text-muted-foreground">
               Another Head offers a comprehensive suite of tools to manage and grow your food business efficiently.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature) => (
-              <Card key={feature.title} className="bg-card border rounded-2xl p-6 text-left transition-all duration-300 hover:shadow-lg">
+              <Card key={feature.title} className="bg-card border rounded-2xl p-6 text-left transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                 <div className="mb-4">
                   <div className="p-3 rounded-full bg-primary/10 inline-block">
                     <feature.icon className="h-6 w-6 text-primary" />
@@ -145,10 +145,10 @@ export default function HomePage() {
         </section>
         
         {/* Testimonials Section */}
-        <section id="testimonials" className="bg-secondary/50 py-24 sm:py-32">
+        <section id="testimonials" className="bg-secondary/50 py-16 sm:py-24 md:py-32">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">Loved by Restaurants Everywhere</h2>
+            <div className="text-center mb-12 sm:mb-16">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-foreground">Loved by Restaurants Everywhere</h2>
               <p className="mt-6 max-w-2xl mx-auto text-lg leading-8 text-muted-foreground">
                 Hear what our satisfied clients have to say about Another Head.
               </p>
@@ -176,10 +176,10 @@ export default function HomePage() {
         </section>
 
         {/* Integrations Section */}
-        <section id="integrations" className="py-24 sm:py-32">
+        <section id="integrations" className="py-16 sm:py-24 md:py-32">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">Seamless Integrations</h2>
+            <div className="text-center mb-12 sm:mb-16">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-foreground">Seamless Integrations</h2>
               <p className="mt-6 max-w-2xl mx-auto text-lg leading-8 text-muted-foreground">
                 Connect Another Head with your favorite tools to streamline operations and enhance customer experience.
               </p>

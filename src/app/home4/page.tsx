@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { Navbar } from '@/components/landing/Navbar';
 import { ContactFooter } from '@/components/landing/ContactFooter';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Utensils, Coffee, Pill, Users } from 'lucide-react';
+import { ArrowRight, Utensils, Coffee, Pill, Users, Check } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Container } from '@/components/landing/Container';
 
@@ -53,14 +53,14 @@ export default function Home4Page() {
             <div className="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_50%_200px,#C9EBFF,transparent)]"></div>
           </div>
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl font-extrabold tracking-tight text-foreground sm:text-6xl md:text-7xl">
+            <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-foreground">
               Smart Software for Modern Businesses
             </h1>
-            <p className="mt-6 max-w-3xl mx-auto text-lg text-muted-foreground sm:text-xl md:text-2xl">
+            <p className="mt-6 max-w-3xl mx-auto text-lg sm:text-xl md:text-2xl text-muted-foreground">
               Another Head builds smart software for cafes, restaurants, medical shops, and payroll systems — helping businesses run smoother, faster, and better. Simple tools, powerful results.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button size="lg" className="px-8 py-3 text-lg font-semibold group" asChild>
+              <Button size="lg" className="w-full sm:w-auto px-8 py-3 text-lg font-semibold group" asChild>
                 <Link href="#products">
                   Explore Our Solutions <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </Link>
@@ -70,10 +70,10 @@ export default function Home4Page() {
         </section>
 
         {/* Products Section */}
-        <Container id="products">
-          <div className="text-center mb-16">
+        <Container id="products" className="py-16 sm:py-24 md:py-32">
+          <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-base font-semibold leading-7 text-primary">Our Solutions</h2>
-            <p className="mt-2 text-4xl font-bold tracking-tight text-foreground sm:text-5xl">Software Built for Your Industry</p>
+            <p className="mt-2 text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-foreground">Software Built for Your Industry</p>
             <p className="mt-6 max-w-2xl mx-auto text-lg leading-8 text-muted-foreground">
               We offer tailored solutions designed to meet the unique challenges of your business.
             </p>
@@ -82,13 +82,13 @@ export default function Home4Page() {
             {products.map((product) => (
               <Card key={product.title} className="group relative overflow-hidden rounded-2xl bg-card transition-all duration-300 hover:shadow-xl hover:-translate-y-2 border-transparent hover:border-primary/20">
                 <div className={`absolute top-0 left-0 h-1.5 w-full ${product.color} transition-all duration-300 group-hover:h-full group-hover:opacity-10`} />
-                <CardHeader className="pt-8 relative z-10">
+                <CardHeader className="pt-8 relative z-10 items-center">
                    <div className="p-4 bg-primary/10 rounded-full mb-4 inline-block mx-auto transition-transform duration-300 group-hover:scale-110">
                       <product.icon className="h-10 w-10 text-primary" />
                     </div>
                   <CardTitle className="text-2xl font-bold text-center text-foreground">{product.title}</CardTitle>
                 </CardHeader>
-                <CardContent className="text-center relative z-10">
+                <CardContent className="text-center relative z-10 px-6 pb-6">
                   <p className="mt-2 text-muted-foreground">{product.description}</p>
                    <Button variant="link" asChild className="mt-4 text-lg">
                     <Link href={product.link}>
@@ -102,11 +102,11 @@ export default function Home4Page() {
         </Container>
 
         {/* Why Choose Us Section */}
-        <section className="bg-secondary/40 py-24 sm:py-32">
+        <section className="bg-secondary/40 py-16 sm:py-24 md:py-32">
           <Container className="py-0">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              <div>
-                <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-5xl">The Another Head Advantage</h2>
+              <div className="text-center lg:text-left">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-foreground">The Another Head Advantage</h2>
                 <p className="mt-6 text-lg leading-8 text-muted-foreground">
                   Our software is more than just features. It's a commitment to simplicity, power, and your success. We handle the complexities of technology so you can focus on what you do best: running your business.
                 </p>

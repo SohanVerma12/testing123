@@ -1,3 +1,4 @@
+
 'use client';
 
 import { Navbar } from '@/components/landing/Navbar';
@@ -56,11 +57,11 @@ export default function PricingPage() {
       <main className="flex-grow">
         {/* Header Section */}
         <section className="py-20 md:py-28 bg-gradient-to-b from-primary/10 to-background">
-          <Container className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl">
+          <Container className="text-center py-12 md:py-16">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-foreground">
               Transparent, Scalable Pricing for Every Restaurant
             </h1>
-            <p className="mt-6 text-lg text-foreground/80 max-w-3xl mx-auto sm:text-xl">
+            <p className="mt-6 text-lg sm:text-xl text-foreground/80 max-w-3xl mx-auto">
               Whether you're running a single café or a chain of outlets, our pricing plans are designed to grow with your business. No hidden fees. No long-term lock-ins.
             </p>
           </Container>
@@ -77,7 +78,7 @@ export default function PricingPage() {
                 <Table>
                   <TableHeader>
                     <TableRow className="bg-muted/50">
-                      <TableHead className="w-1/3 text-lg font-semibold text-foreground">Feature</TableHead>
+                      <TableHead className="w-[250px] sm:w-1/3 text-lg font-semibold text-foreground">Feature</TableHead>
                       <TableHead className="text-center text-lg font-semibold text-foreground">Starter <br/><span className="text-sm font-normal text-primary">(₹999/mo)</span></TableHead>
                       <TableHead className="text-center text-lg font-semibold text-foreground border-x border-border">Pro <br/><span className="text-sm font-normal text-primary">(₹1,999/mo)</span></TableHead>
                       <TableHead className="text-center text-lg font-semibold text-foreground">Enterprise <br/><span className="text-sm font-normal text-primary">(Custom)</span></TableHead>
@@ -103,7 +104,7 @@ export default function PricingPage() {
               </div>
             </CardContent>
           </Card>
-           <div className="mt-12 text-center space-y-4 sm:space-y-0 sm:flex sm:flex-row sm:justify-center sm:gap-4">
+           <div className="mt-12 text-center space-y-4 sm:space-y-0 sm:flex sm:flex-wrap sm:justify-center sm:gap-4">
               <Button size="lg" asChild className="w-full sm:w-auto">
                 <Link href="#contact">Get Started with Starter</Link>
               </Button>
@@ -125,13 +126,13 @@ export default function PricingPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {whyChooseItems.map((item) => (
                 <Card key={item.title} className="text-center bg-card hover:shadow-xl transition-shadow duration-300">
-                  <CardHeader className="items-center">
+                  <CardHeader className="items-center p-6">
                     <div className="p-3 bg-primary/10 rounded-full mb-3 inline-block">
                       <item.icon className="h-8 w-8 text-primary" />
                     </div>
                     <CardTitle className="text-xl font-semibold">{item.title}</CardTitle>
                   </CardHeader>
-                  <CardContent>
+                  <CardContent className="p-6 pt-0">
                     <p className="text-foreground/70">{item.description}</p>
                   </CardContent>
                 </Card>
@@ -186,7 +187,7 @@ export default function PricingPage() {
               ))}
             </div>
             <div className="text-center">
-              <Button size="lg" asChild>
+              <Button size="lg" asChild className="w-full sm:w-auto">
                 <Link href="#contact">Talk to Sales for Add-on Pricing</Link>
               </Button>
             </div>
@@ -249,7 +250,7 @@ export default function PricingPage() {
               </Card>
             </div>
             <div className="mt-12 text-center">
-              <Button variant="outline" size="lg" asChild>
+              <Button variant="outline" size="lg" asChild className="w-full sm:w-auto">
                 <Link href="/#testimonials">Read More Testimonials</Link>
               </Button>
             </div>
@@ -264,10 +265,10 @@ export default function PricingPage() {
           <div className="max-w-3xl mx-auto space-y-6">
             {faqItems.map((item, index) => (
               <Card key={index} className="bg-card shadow-md">
-                <CardHeader>
+                <CardHeader className="p-6">
                   <CardTitle className="text-lg font-semibold text-primary">{item.q}</CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="p-6 pt-0">
                   <p className="text-foreground/80">{item.a}</p>
                 </CardContent>
               </Card>
@@ -277,7 +278,7 @@ export default function PricingPage() {
 
         {/* Section 8: Need Help Deciding? */}
         <section className="py-20 md:py-28 bg-gradient-to-t from-primary/10 to-background">
-          <Container className="text-center">
+          <Container className="text-center py-12 md:py-16">
             <MessageCircle className="h-16 w-16 text-primary mx-auto mb-6" />
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-6">
               Need Help Deciding?
@@ -286,10 +287,10 @@ export default function PricingPage() {
               Not sure which plan fits your needs? Let our experts guide you based on your business type and goals.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 text-lg font-semibold">
+              <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground w-full sm:w-auto px-8 py-3 text-lg font-semibold">
                 <Link href="#contact">Schedule a Demo</Link>
               </Button>
-              <Button size="lg" variant="outline" asChild className="border-primary text-primary hover:bg-primary/5 px-8 py-3 text-lg font-semibold">
+              <Button size="lg" variant="outline" asChild className="border-primary text-primary hover:bg-primary/5 w-full sm:w-auto px-8 py-3 text-lg font-semibold">
                 <Link href="#contact">Talk to Sales</Link>
               </Button>
             </div>
@@ -305,15 +306,15 @@ export default function PricingPage() {
             <p className="text-lg text-foreground/80 max-w-2xl mx-auto mb-6">
              Join 50,000+ restaurants already using Another Head.
             </p>
-             <div className="flex items-center justify-center space-x-4 text-sm text-green-600 mb-8">
+             <div className="flex items-center justify-center flex-wrap gap-x-4 gap-y-2 text-sm text-green-600 mb-8">
                 <span>✅ No credit card required</span>
                 <span>✅ Cancel anytime</span>
             </div>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground px-10 py-4 text-xl font-semibold">
+              <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground w-full sm:w-auto px-10 py-4 text-xl font-semibold">
                 <Link href="#contact">Get Started Free</Link>
               </Button>
-              <Button size="lg" variant="outline" asChild className="border-primary text-primary hover:bg-primary/5 px-10 py-4 text-xl font-semibold">
+              <Button size="lg" variant="outline" asChild className="border-primary text-primary hover:bg-primary/5 w-full sm:w-auto px-10 py-4 text-xl font-semibold">
                 <Link href="#contact">Request a Demo</Link>
               </Button>
             </div>

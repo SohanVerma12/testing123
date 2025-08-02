@@ -4,7 +4,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Navbar } from '@/components/landing/Navbar';
-import { ContactFooter } from '@/components/landing/ContactFooter'; // Or a custom blog footer if needed
+import { ContactFooter } from '@/components/landing/ContactFooter';
 import { Container } from '@/components/landing/Container';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -73,12 +73,12 @@ export default function BlogPage() {
       <main className="flex-grow">
         {/* Header Section */}
         <section className="py-20 md:py-28 bg-gradient-to-b from-primary/10 to-background">
-          <Container className="text-center">
+          <Container className="text-center py-12 md:py-16">
             <Newspaper className="h-16 w-16 text-primary mx-auto mb-6" />
-            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-foreground">
               Industry Insights, Trends & Tips for Modern Restaurants
             </h1>
-            <p className="mt-6 text-lg text-foreground/80 max-w-3xl mx-auto sm:text-xl">
+            <p className="mt-6 text-lg sm:text-xl text-foreground/80 max-w-3xl mx-auto">
               From technology and marketing to operations and hiring — explore expert-backed articles to grow and future-proof your food business.
             </p>
           </Container>
@@ -86,23 +86,23 @@ export default function BlogPage() {
 
         {/* Featured Articles Section */}
         <Container id="featured-articles" className="py-16 md:py-20">
-          <h2 className="text-3xl font-bold text-center text-foreground sm:text-4xl mb-12">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center text-foreground mb-12">
             📰 Featured Articles
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredArticles.map((article, index) => (
               <Card key={index} className="flex flex-col h-full shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <CardHeader>
+                <CardHeader className="p-6">
                   <div className="flex items-center text-primary mb-2">
                     <Pin className="h-5 w-5 mr-2" />
                     <span className="font-semibold">Featured</span>
                   </div>
                   <CardTitle className="text-xl">{article.title}</CardTitle>
                 </CardHeader>
-                <CardContent className="flex-grow">
+                <CardContent className="flex-grow p-6 pt-0">
                   <p className="text-foreground/75">{article.summary}</p>
                 </CardContent>
-                <CardFooter>
+                <CardFooter className="p-6 pt-0">
                   <Button asChild variant="link" className="p-0 text-primary hover:underline">
                     <Link href={article.link}>Read More →</Link>
                   </Button>
@@ -192,13 +192,13 @@ export default function BlogPage() {
             Want us to write about a topic? Or need advice for your restaurant?
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg" variant="outline" asChild className="border-primary text-primary hover:bg-primary/5">
+            <Button size="lg" variant="outline" asChild className="border-primary text-primary hover:bg-primary/5 w-full sm:w-auto">
               <Link href="/#contact"><Mail className="mr-2 h-5 w-5" /> Contact Us</Link>
             </Button>
-            <Button size="lg" variant="outline" asChild className="border-primary text-primary hover:bg-primary/5">
+            <Button size="lg" variant="outline" asChild className="border-primary text-primary hover:bg-primary/5 w-full sm:w-auto">
               <Link href="tel:1800000XXXX"><Phone className="mr-2 h-5 w-5" /> 1800-XXX-XXXX</Link>
             </Button>
-            <Button size="lg" variant="outline" asChild className="border-primary text-primary hover:bg-primary/5">
+            <Button size="lg" variant="outline" asChild className="border-primary text-primary hover:bg-primary/5 w-full sm:w-auto">
               <Link href="https://wa.me/911234567890" target="_blank" rel="noopener noreferrer">
                 <MessageSquare className="mr-2 h-5 w-5" /> WhatsApp Chat
               </Link>
@@ -208,7 +208,7 @@ export default function BlogPage() {
 
         {/* Footer CTA Section */}
         <section className="py-20 md:py-28 bg-gradient-to-t from-primary/10 to-background">
-          <Container className="text-center">
+          <Container className="text-center py-12 md:py-16">
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-6">
               Discover how Another Head can transform your business
             </h2>
@@ -218,17 +218,17 @@ export default function BlogPage() {
               <span className="flex items-center"><CheckCircle2 className="h-6 w-6 mr-2"/>Free demo. No card required.</span>
             </div>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 text-lg font-semibold">
+              <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground w-full sm:w-auto px-8 py-3 text-lg font-semibold">
                 <Link href="/#contact">Schedule a Demo</Link>
               </Button>
-              <Button size="lg" variant="outline" asChild className="border-primary text-primary hover:bg-primary/5 px-8 py-3 text-lg font-semibold">
+              <Button size="lg" variant="outline" asChild className="border-primary text-primary hover:bg-primary/5 w-full sm:w-auto px-8 py-3 text-lg font-semibold">
                 <Link href="/">Visit the Homepage</Link>
               </Button>
             </div>
           </Container>
         </section>
       </main>
-      <ContactFooter /> {/* Using the existing contact footer, or create a simpler one for blog if needed */}
+      <ContactFooter />
     </div>
   );
 }

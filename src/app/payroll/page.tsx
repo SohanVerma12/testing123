@@ -50,16 +50,16 @@ export default function PayrollPage() {
       <main className="flex-grow">
         {/* Header Section */}
         <section className="py-20 md:py-28 bg-gradient-to-b from-green-500/10 to-background">
-          <Container className="text-center">
+          <Container className="text-center py-12 md:py-16">
             <Users className="h-16 w-16 text-green-500 mx-auto mb-6" />
-            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-foreground">
               Simple, Accurate, and Compliant Payroll Software
             </h1>
-            <p className="mt-6 text-lg text-foreground/80 max-w-3xl mx-auto sm:text-xl">
+            <p className="mt-6 text-lg sm:text-xl text-foreground/80 max-w-3xl mx-auto">
               Pay your employees on time, every time, without the hassle. Our software automates payroll processing so you can focus on your people.
             </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
-              <Button size="lg" className="bg-green-500 hover:bg-green-600 text-white" asChild>
+            <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-x-6 gap-y-4">
+              <Button size="lg" className="bg-green-500 hover:bg-green-600 text-white w-full sm:w-auto" asChild>
                 <Link href="/#contact">Request a Demo</Link>
               </Button>
             </div>
@@ -67,9 +67,9 @@ export default function PayrollPage() {
         </section>
 
         {/* Feature Section */}
-        <Container id="features">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">Payroll Management, Simplified</h2>
+        <Container id="features" className="py-16 sm:py-24 md:py-32">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground">Payroll Management, Simplified</h2>
             <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
               Discover the features that make payroll processing stress-free.
             </p>
@@ -77,13 +77,13 @@ export default function PayrollPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature) => (
               <Card key={feature.title} className="text-left bg-card hover:shadow-xl transition-shadow duration-300">
-                <CardHeader>
+                <CardHeader className="p-6">
                   <div className="p-3 bg-green-500/10 rounded-full mb-4 inline-block">
                     <feature.icon className="h-8 w-8 text-green-500" />
                   </div>
                   <CardTitle className="text-2xl font-semibold">{feature.title}</CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="p-6 pt-0">
                   <p className="text-foreground/70">{feature.description}</p>
                 </CardContent>
               </Card>
@@ -92,7 +92,7 @@ export default function PayrollPage() {
         </Container>
 
          {/* Why Us Section */}
-        <section className="bg-secondary/40 py-24 sm:py-32">
+        <section className="bg-secondary/40 py-16 sm:py-24 md:py-32">
           <Container className="py-0">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                <div className="relative aspect-square w-full max-w-lg mx-auto">
@@ -106,7 +106,7 @@ export default function PayrollPage() {
                   />
               </div>
               <div className="text-center lg:text-left">
-                  <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">Focus on People, Not Paperwork</h2>
+                  <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground">Focus on People, Not Paperwork</h2>
                   <p className="mt-6 text-lg leading-8 text-muted-foreground">
                     Manual payroll is prone to errors and consumes valuable time. Another Head Payroll automates the entire process, ensuring accuracy and compliance, so your HR team can focus on strategic initiatives that matter.
                   </p>
@@ -121,15 +121,15 @@ export default function PayrollPage() {
         </section>
 
         {/* CTA Section */}
-        <Container className="text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+        <Container className="text-center py-16 sm:py-24 md:py-32">
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground">
               Ready for Stress-Free Payroll?
             </h2>
             <p className="mt-4 text-xl text-foreground/80 max-w-3xl mx-auto mb-10">
               Let us show you how easy payroll can be. Get a personalized demo today.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button size="lg" asChild className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 text-lg font-semibold">
+              <Button size="lg" asChild className="bg-green-500 hover:bg-green-600 text-white w-full sm:w-auto px-8 py-3 text-lg font-semibold">
                 <Link href="/#contact">Talk to an Expert</Link>
               </Button>
             </div>

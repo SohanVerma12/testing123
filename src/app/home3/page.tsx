@@ -117,14 +117,14 @@ export default function Home3Page() {
           <div className="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_50%_200px,#C9EBFF,transparent)]"></div>
         </div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h1 className="text-4xl font-extrabold tracking-tighter text-foreground sm:text-6xl md:text-7xl">
+          <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tighter text-foreground">
             Technology That Transforms
           </h1>
-          <p className="mt-6 max-w-3xl mx-auto text-lg text-muted-foreground sm:text-xl md:text-2xl">
+          <p className="mt-6 max-w-3xl mx-auto text-lg sm:text-xl md:text-2xl text-muted-foreground">
             We don't just build software. We engineer the future with powerful, scalable, and intelligent technology solutions.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg" className="px-8 py-3 text-lg font-semibold" asChild>
+            <Button size="lg" className="w-full sm:w-auto px-8 py-3 text-lg font-semibold" asChild>
               <Link href="#products">
                 Explore Our Tech <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
@@ -132,8 +132,8 @@ export default function Home3Page() {
           </div>
         </div>
 
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-16 sm:mt-20">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {techPillars.map((pillar) => (
               <div key={pillar.title} className="p-6 rounded-xl bg-background/50 border border-border transition-all hover:border-primary/50 hover:shadow-lg">
                 <div className="flex items-center gap-4">
@@ -150,10 +150,10 @@ export default function Home3Page() {
       </section>
 
       {/* Products Section */}
-      <section id="products" className="container mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
-        <div className="text-center mb-16">
+      <section id="products" className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 md:py-32">
+        <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-base font-semibold leading-7 text-primary">OUR PRODUCTS</h2>
-          <p className="mt-2 text-4xl font-bold tracking-tight text-foreground sm:text-5xl">Explore Our Technology Stack</p>
+          <p className="mt-2 text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-foreground">Explore Our Technology Stack</p>
           <p className="mt-6 max-w-2xl mx-auto text-lg leading-8 text-muted-foreground">
             Each product is a building block for innovation, designed for performance and reliability.
           </p>
@@ -172,7 +172,7 @@ export default function Home3Page() {
               >
                 <div className={cn('absolute -top-1/4 -right-1/4 h-1/2 w-1/2 rounded-full opacity-[0.05] blur-3xl', colorClass.bg)} />
 
-                <CardHeader>
+                <CardHeader className="p-6">
                   <div className="flex items-start justify-between">
                     <div className="flex items-center gap-4">
                       <product.icon className={cn('h-8 w-8', colorClass.text)} />
@@ -183,7 +183,7 @@ export default function Home3Page() {
                     </div>
                   </div>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="p-6 pt-0">
                   <p className="mt-2 text-muted-foreground">{product.description}</p>
                 </CardContent>
               </Card>
@@ -193,11 +193,11 @@ export default function Home3Page() {
       </section>
       
       {/* Use Cases Section */}
-      <section className="bg-secondary/40 py-24 sm:py-32">
+      <section className="bg-secondary/40 py-16 sm:py-24 md:py-32">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
+            <div className="text-center mb-12 sm:mb-16">
               <h2 className="text-base font-semibold leading-7 text-primary">APPLICATIONS</h2>
-              <p className="mt-2 text-4xl font-bold tracking-tight text-foreground sm:text-5xl">How Our Technology Is Used</p>
+              <p className="mt-2 text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-foreground">How Our Technology Is Used</p>
               <p className="mt-6 max-w-2xl mx-auto text-lg leading-8 text-muted-foreground">
                 Our flexible and powerful platform can be adapted to solve a wide range of business challenges.
               </p>
@@ -217,7 +217,7 @@ export default function Home3Page() {
       </section>
 
       {/* Trusted by Section */}
-      <section className="bg-background py-24 sm:py-32">
+      <section className="bg-background py-16 sm:py-24 md:py-32">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-center text-2xl font-semibold leading-8 text-foreground">
               Trusted by the world's most innovative companies
@@ -241,11 +241,11 @@ export default function Home3Page() {
       </section>
 
       {/* Why Our Tech Section */}
-      <section className="bg-secondary/40 py-24 sm:py-32">
+      <section className="bg-secondary/40 py-16 sm:py-24 md:py-32">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div className="text-center lg:text-left">
-                    <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-5xl">Engineered for Excellence.</h2>
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-foreground">Engineered for Excellence.</h2>
                     <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-muted-foreground lg:mx-0">
                         Our technology isn't just about features; it's about providing a foundation you can trust to build and scale your ambitions.
                     </p>
@@ -268,18 +268,18 @@ export default function Home3Page() {
       </section>
 
       {/* Final CTA */}
-        <section className="py-24 sm:py-32">
+        <section className="py-16 sm:py-24 md:py-32">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <Cpu className="h-16 w-16 mx-auto text-primary mb-6" />
-                <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-5xl">Ready to Innovate?</h2>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-foreground">Ready to Innovate?</h2>
                 <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-muted-foreground">
                     Let's discuss how our technology can be the catalyst for your next big breakthrough.
                 </p>
-                <div className="mt-10 flex items-center justify-center gap-x-6">
-                    <Button size="lg" asChild>
+                <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-x-6 gap-y-4">
+                    <Button size="lg" asChild className="w-full sm:w-auto">
                         <Link href="/#contact">Talk to an Expert</Link>
                     </Button>
-                    <Button size="lg" variant="outline" asChild>
+                    <Button size="lg" variant="outline" asChild className="w-full sm:w-auto">
                         <Link href="#pricing">
                            View Pricing
                         </Link>

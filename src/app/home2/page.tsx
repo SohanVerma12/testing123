@@ -54,19 +54,19 @@ export default function Home2Page() {
             <div className="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_50%_200px,#C9EBFF,transparent)]"></div>
           </div>
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl font-extrabold tracking-tight text-foreground sm:text-6xl md:text-7xl">
+            <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-foreground">
               The Future of Restaurant <br className="hidden sm:block" /> Management is Here
             </h1>
-            <p className="mt-6 max-w-3xl mx-auto text-lg text-muted-foreground sm:text-xl md:text-2xl">
+            <p className="mt-6 max-w-3xl mx-auto text-lg sm:text-xl md:text-2xl text-muted-foreground">
               Another Head combines elegant design with powerful AI to give you an unparalleled operational advantage.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button size="lg" className="px-8 py-3 text-lg font-semibold group" asChild>
+              <Button size="lg" className="w-full sm:w-auto px-8 py-3 text-lg font-semibold group" asChild>
                 <Link href="/#contact">
                   Request a Demo <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="px-8 py-3 text-lg font-semibold" asChild>
+              <Button size="lg" variant="outline" className="w-full sm:w-auto px-8 py-3 text-lg font-semibold" asChild>
                 <Link href="/#features">
                   Learn More
                 </Link>
@@ -90,10 +90,10 @@ export default function Home2Page() {
         </section>
 
         {/* Features Section */}
-        <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
-          <div className="text-center mb-16">
+        <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 md:py-32">
+          <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-base font-semibold leading-7 text-primary">Everything You Need</h2>
-            <p className="mt-2 text-4xl font-bold tracking-tight text-foreground sm:text-5xl">All-in-One Platform</p>
+            <p className="mt-2 text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-foreground">All-in-One Platform</p>
             <p className="mt-6 text-lg leading-8 text-muted-foreground">
               From the front-of-house to the back-office, we've got you covered.
             </p>
@@ -105,13 +105,13 @@ export default function Home2Page() {
                 key={feature.title}
                 className="bg-card border rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
               >
-                <CardHeader className="flex-row items-start gap-4 space-y-0">
+                <CardHeader className="flex-row items-start gap-4 space-y-0 p-6">
                     <div className="p-3 rounded-full bg-primary/10">
                         <feature.icon className="h-6 w-6 text-primary" />
                     </div>
-                    <CardTitle className="text-xl font-semibold">{feature.title}</CardTitle>
+                    <CardTitle className="text-xl font-semibold mt-0">{feature.title}</CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="p-6 pt-0">
                   <p className="mt-2 text-muted-foreground">{feature.description}</p>
                 </CardContent>
               </Card>
@@ -121,13 +121,13 @@ export default function Home2Page() {
 
         {/* Final CTA */}
         <section className="bg-secondary/50">
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 text-center">
-                <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-5xl">Ready to Dive In?</h2>
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 md:py-32 text-center">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-foreground">Ready to Dive In?</h2>
                 <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-muted-foreground">
                     Join thousands of innovative restaurants and see the difference Another Head can make.
                 </p>
-                <div className="mt-10 flex items-center justify-center gap-x-6">
-                    <Button size="lg" className="px-8 py-3 text-lg font-semibold" asChild>
+                <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-x-6 gap-y-4">
+                    <Button size="lg" className="w-full sm:w-auto px-8 py-3 text-lg font-semibold" asChild>
                         <Link href="/#contact">Get Started Now</Link>
                     </Button>
                     <Button size="lg" variant="ghost" className="group" asChild>
