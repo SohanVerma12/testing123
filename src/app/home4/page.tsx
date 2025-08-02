@@ -81,14 +81,14 @@ export default function Home4Page() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {products.map((product) => (
               <Card key={product.title} className="group relative overflow-hidden rounded-2xl bg-card transition-all duration-300 hover:shadow-xl hover:-translate-y-2 border-transparent hover:border-primary/20">
-                <div className={`absolute top-0 left-0 h-1.5 w-full ${product.color}`} />
-                <CardHeader className="pt-8">
-                   <div className="p-4 bg-primary/10 rounded-full mb-4 inline-block mx-auto">
+                <div className={`absolute top-0 left-0 h-1.5 w-full ${product.color} transition-all duration-300 group-hover:h-full group-hover:opacity-10`} />
+                <CardHeader className="pt-8 relative z-10">
+                   <div className="p-4 bg-primary/10 rounded-full mb-4 inline-block mx-auto transition-transform duration-300 group-hover:scale-110">
                       <product.icon className="h-10 w-10 text-primary" />
                     </div>
                   <CardTitle className="text-2xl font-bold text-center text-foreground">{product.title}</CardTitle>
                 </CardHeader>
-                <CardContent className="text-center">
+                <CardContent className="text-center relative z-10">
                   <p className="mt-2 text-muted-foreground">{product.description}</p>
                    <Button variant="link" asChild className="mt-4 text-lg">
                     <Link href={product.link}>
@@ -111,9 +111,9 @@ export default function Home4Page() {
                   Our software is more than just features. It's a commitment to simplicity, power, and your success. We handle the complexities of technology so you can focus on what you do best: running your business.
                 </p>
                 <div className="mt-8 flex flex-col gap-4">
-                    <div className="flex items-center gap-4"><div className="p-2 rounded-full bg-green-100"><Check className="h-5 w-5 text-green-600" /></div><span className="text-lg font-medium">Intuitive and Easy to Use</span></div>
-                    <div className="flex items-center gap-4"><div className="p-2 rounded-full bg-green-100"><Check className="h-5 w-5 text-green-600" /></div><span className="text-lg font-medium">Powerful, Real-Time Analytics</span></div>
-                    <div className="flex items-center gap-4"><div className="p-2 rounded-full bg-green-100"><Check className="h-5 w-5 text-green-600" /></div><span className="text-lg font-medium">Dedicated Customer Support</span></div>
+                    <div className="flex items-center gap-4 transition-transform duration-200 hover:translate-x-1"><div className="p-2 rounded-full bg-green-100"><Check className="h-5 w-5 text-green-600" /></div><span className="text-lg font-medium">Intuitive and Easy to Use</span></div>
+                    <div className="flex items-center gap-4 transition-transform duration-200 hover:translate-x-1"><div className="p-2 rounded-full bg-green-100"><Check className="h-5 w-5 text-green-600" /></div><span className="text-lg font-medium">Powerful, Real-Time Analytics</span></div>
+                    <div className="flex items-center gap-4 transition-transform duration-200 hover:translate-x-1"><div className="p-2 rounded-full bg-green-100"><Check className="h-5 w-5 text-green-600" /></div><span className="text-lg font-medium">Dedicated Customer Support</span></div>
                 </div>
               </div>
               <div className="relative aspect-square w-full max-w-lg mx-auto">
@@ -123,7 +123,7 @@ export default function Home4Page() {
                     layout="fill"
                     objectFit="cover"
                     data-ai-hint="abstract software ui"
-                    className="rounded-2xl shadow-xl"
+                    className="rounded-2xl shadow-xl transition-transform duration-300 hover:scale-105"
                   />
               </div>
             </div>
