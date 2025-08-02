@@ -26,15 +26,21 @@ const AHLogo = () => (
 
 export function Navbar() {
   const navItems = [
-    { href: '/home2', label: 'Home2' },
-    { href: '/home3', label: 'Home3' },
-    { href: '/#features', label: 'Features' },
-    { href: '/industries', label: 'Industries' },
+    { href: '/home4', label: 'Home' },
+    {
+      href: '#',
+      label: 'Products',
+      subItems: [
+        { href: '/restaurants', label: 'Restaurants' },
+        { href: '/cafes', label: 'Cafes' },
+        { href: '/medical-shops', label: 'Medical Shops' },
+        { href: '/payroll', label: 'Payroll' },
+      ],
+    },
     { href: '/pricing', label: 'Pricing' },
-    { href: '/services', label: 'Services' },
-    { href: '/#testimonials', label: 'Testimonials' },
     { href: '/about-us', label: 'About Us' },
     { href: '/blog', label: 'Blog' },
+    { href: '/#contact', label: 'Contact' },
   ];
 
   return (
@@ -58,9 +64,6 @@ export function Navbar() {
         </nav>
 
         <div className="hidden items-center gap-2 md:flex">
-          <Button variant="outline" asChild>
-            <Link href="/#contact">Contact Sales</Link>
-          </Button>
           <Button asChild>
             <Link href="/#contact">Schedule a Demo</Link>
           </Button>
@@ -79,21 +82,38 @@ export function Navbar() {
                 <AHLogo />
                 <span className="text-xl font-bold text-foreground">Another Head</span>
               </Link>
-              {navItems.map((item) => (
-                <Link
-                  key={item.label}
-                  href={item.href}
-                  className="text-lg font-medium text-muted-foreground transition-colors hover:text-foreground"
-                >
-                  {item.label}
-                </Link>
-              ))}
+              {navItems.map((item) => {
+                if (item.subItems) {
+                  return (
+                    <div key={item.label}>
+                      <p className="text-lg font-medium text-muted-foreground">{item.label}</p>
+                      <div className="grid gap-2 pl-4 mt-2">
+                        {item.subItems.map((subItem) => (
+                          <Link
+                            key={subItem.label}
+                            href={subItem.href}
+                            className="text-base font-medium text-muted-foreground transition-colors hover:text-foreground"
+                          >
+                            {subItem.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                }
+                return (
+                  <Link
+                    key={item.label}
+                    href={item.href}
+                    className="text-lg font-medium text-muted-foreground transition-colors hover:text-foreground"
+                  >
+                    {item.label}
+                  </Link>
+                );
+              })}
               <div className="flex flex-col gap-2 mt-4">
                 <Button asChild>
                   <Link href="/#contact">Schedule a Demo</Link>
-                </Button>
-                 <Button variant="outline" asChild>
-                  <Link href="/#contact">Contact Sales</Link>
                 </Button>
               </div>
             </div>
