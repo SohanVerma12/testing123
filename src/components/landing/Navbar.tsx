@@ -2,8 +2,15 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Menu } from 'lucide-react';
+import { Menu, ChevronDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+
 
 const AHLogo = () => (
   <svg
@@ -52,15 +59,47 @@ export function Navbar() {
         </Link>
         
         <nav className="hidden items-center gap-6 md:flex">
-          {navItems.map((item) => (
-            <Link
-              key={item.label}
-              href={item.href}
+           <Link
+              href="/home4"
               className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
             >
-              {item.label}
+              Home
             </Link>
-          ))}
+          <DropdownMenu>
+            <DropdownMenuTrigger className="flex items-center gap-1 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground focus:outline-none">
+              Products <ChevronDown className="h-4 w-4" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <DropdownMenuItem asChild><Link href="/restaurants">Restaurants</Link></DropdownMenuItem>
+              <DropdownMenuItem asChild><Link href="/cafes">Cafes</Link></DropdownMenuItem>
+              <DropdownMenuItem asChild><Link href="/medical-shops">Medical Shops</Link></DropdownMenuItem>
+              <DropdownMenuItem asChild><Link href="/payroll">Payroll</Link></DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+           <Link
+              href="/pricing"
+              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+            >
+              Pricing
+            </Link>
+             <Link
+              href="/about-us"
+              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+            >
+              About Us
+            </Link>
+             <Link
+              href="/blog"
+              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+            >
+              Blog
+            </Link>
+             <Link
+              href="/#contact"
+              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+            >
+              Contact
+            </Link>
         </nav>
 
         <div className="hidden items-center gap-2 md:flex">
