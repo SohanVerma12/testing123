@@ -1,6 +1,6 @@
 "use client";
 
-import Image from 'next/image';
+import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -46,24 +46,26 @@ export function Navbar() {
     // { href: '/blog', label: 'Blog' },
     // { href: '/#contact', label: 'Contact' },
   ];
-  
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 max-w-screen-2xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center gap-2">
-          {/* <AHLogo /> */}
-          <Image
-            src='/logo.png'
-            alt="HR manager reviewing payroll on a laptop"
-            width={130}
-            height={130}
-          />
-         <span className="text-3xl font-extrabold text-primary tracking-wide">
-  Another Head
-</span>
+       <Link href="/" className="flex items-center gap-2">
+  {/* Logo */}
+  <Image
+    src="/logo.png"
+    alt="HR manager reviewing payroll on a laptop"
+    width={130}
+    height={130}
+    className="w-32 h-32 sm:w-24 sm:h-24 md:w-32 md:h-32" // Adjusts size based on screen size
+  />
+  
+  {/* Text */}
+  <span className="text-2xl sm:text-xl md:text-3xl font-extrabold text-primary tracking-wide">
+    Another Head
+  </span>
+</Link>
 
-        </Link>
 
         <nav className="hidden items-center gap-6 md:flex">
           {navItems.map((item) => (
