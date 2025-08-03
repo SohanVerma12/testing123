@@ -14,7 +14,7 @@ export function FloatingSupport() {
         asChild
       >
         <Link 
-          href="https://wa.me/911234567890" // Replace with your WhatsApp number
+          href="https://wa.me/919340785987" // Replace with your WhatsApp number
           target="_blank" 
           rel="noopener noreferrer"
           aria-label="Chat on WhatsApp"

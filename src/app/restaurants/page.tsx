@@ -10,6 +10,7 @@ import Image from 'next/image';
 import { CheckCircle2, ArrowRight, Utensils, ReceiptText, Boxes, Users, BarChart3, CookingPot } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import type { Metadata } from 'next';
+// import resDashboard from '/res_dashboard.jpg';
 
 // export const metadata: Metadata = {
 //   title: 'Restaurant POS Software | Another Head for Restaurants',
@@ -104,7 +105,7 @@ export default function RestaurantsPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                <div className="relative aspect-square w-full max-w-lg mx-auto">
                  <Image
-                    src="https://placehold.co/600x600.png"
+                    src='/res_dashboard.jpg'
                     alt="Restaurant dashboard on a tablet"
                     layout="fill"
                     objectFit="cover"

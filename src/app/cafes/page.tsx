@@ -10,6 +10,7 @@ import Image from 'next/image';
 import { CheckCircle2, ArrowRight, Coffee, Zap, Users, BarChart3, Percent, QrCode } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import type { Metadata } from 'next';
+// import cafeDashboard from "/cafe_dashboard.jpg";
 
 // export const metadata: Metadata = {
 //   title: 'Cafe POS Software | Another Head for Coffee Shops',
@@ -104,7 +105,7 @@ export default function CafesPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                <div className="relative aspect-square w-full max-w-lg mx-auto">
                  <Image
-                    src="https://placehold.co/600x600.png"
+                    src='/cafe_dashboard.jpg'
                     alt="Cafe owner using POS system"
                     layout="fill"
                     objectFit="cover"

@@ -10,6 +10,7 @@ import Image from 'next/image';
 import { CheckCircle2, ArrowRight, Pill, FileText, Package, Search, Bell, Shield, BarChart3 } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import type { Metadata } from 'next';
+// import pharama_dashboard from '/pharama_dashboard.jpg';
 
 // export const metadata: Metadata = {
 //   title: 'Pharmacy Management Software | Another Head for Medical Shops',
@@ -104,7 +105,7 @@ export default function MedicalShopsPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                <div className="relative aspect-square w-full max-w-lg mx-auto">
                  <Image
-                    src="https://placehold.co/600x600.png"
+                    src='/pharama_dashboard.jpg'
                     alt="Pharmacist using software on computer"
                     layout="fill"
                     objectFit="cover"

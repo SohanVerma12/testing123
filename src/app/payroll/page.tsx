@@ -10,6 +10,7 @@ import Image from 'next/image';
 import { CheckCircle2, ArrowRight, Users, Calculator, FileStack, HandCoins, ShieldCheck, Clock } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import type { Metadata } from 'next';
+import payrollDashboard from '../../assets/payrollDashboard.jpg';
 
 // export const metadata: Metadata = {
 //   title: 'Payroll Management Software | Another Head Payroll',
@@ -105,7 +106,7 @@ export default function PayrollPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                <div className="relative aspect-square w-full max-w-lg mx-auto">
                  <Image
-                    src="https://placehold.co/600x600.png"
+                    src='/payrollDashboard.jpg'
                     alt="HR manager reviewing payroll on a laptop"
                     layout="fill"
                     objectFit="cover"

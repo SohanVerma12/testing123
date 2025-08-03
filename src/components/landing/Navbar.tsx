@@ -1,11 +1,17 @@
+"use client";
 
-'use client';
-
-import { useState } from 'react';
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
-import { Menu } from 'lucide-react';
+import Image from 'next/image';
+import { useState } from "react";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  SheetClose,
+} from "@/components/ui/sheet";
+import { Menu } from "lucide-react";
+// import logo from './logo.png';
 
 const AHLogo = () => (
   <svg
@@ -30,25 +36,34 @@ export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { href: '/home2', label: 'Home' },
-    { href: '/restaurants', label: 'Restaurants' },
-    { href: '/cafes', label: 'Cafes' },
-    { href: '/medical-shops', label: 'Medical Shops' },
-    { href: '/payroll', label: 'Payroll' },
-    { href: '/pricing', label: 'Pricing' },
-    { href: '/about-us', label: 'About Us' },
-    { href: '/blog', label: 'Blog' },
-    { href: '/#contact', label: 'Contact' },
+    { href: "/home2", label: "Home" },
+    { href: "/restaurants", label: "Restaurants" },
+    { href: "/cafes", label: "Cafes" },
+    { href: "/medical-shops", label: "Medical Shops" },
+    { href: "/payroll", label: "Payroll" },
+    // { href: '/pricing', label: 'Pricing' },
+    // { href: '/about-us', label: 'About Us' },
+    // { href: '/blog', label: 'Blog' },
+    // { href: '/#contact', label: 'Contact' },
   ];
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 max-w-screen-2xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2">
-          <AHLogo />
-          <span className="text-xl font-bold text-foreground">Another Head</span>
+          {/* <AHLogo /> */}
+          <Image
+            src='/logo.png'
+            alt="HR manager reviewing payroll on a laptop"
+            width={130}
+            height={130}
+          />
+         <span className="text-3xl font-extrabold text-primary tracking-wide">
+  Another Head
+</span>
+
         </Link>
-        
+
         <nav className="hidden items-center gap-6 md:flex">
           {navItems.map((item) => (
             <Link
@@ -66,7 +81,7 @@ export function Navbar() {
             <Link href="/#contact">Schedule a Demo</Link>
           </Button>
         </div>
-        
+
         <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
           <SheetTrigger asChild>
             <Button variant="outline" size="icon" className="md:hidden">
@@ -76,12 +91,18 @@ export function Navbar() {
           </SheetTrigger>
           <SheetContent side="right">
             <div className="grid gap-4 p-4">
-               <div className="mb-4">
-                  <Link href="/" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
-                    <AHLogo />
-                    <span className="text-xl font-bold text-foreground">Another Head</span>
-                  </Link>
-               </div>
+              <div className="mb-4">
+                <Link
+                  href="/"
+                  className="flex items-center gap-2"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <AHLogo />
+                  <span className="text-xl font-bold text-foreground">
+                    Another Head
+                  </span>
+                </Link>
+              </div>
               {navItems.map((item) => (
                 <Link
                   key={item.label}
@@ -94,7 +115,12 @@ export function Navbar() {
               ))}
               <div className="flex flex-col gap-2 mt-4">
                 <Button asChild>
-                  <Link href="/#contact" onClick={() => setIsMobileMenuOpen(false)}>Schedule a Demo</Link>
+                  <Link
+                    href="/#contact"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Schedule a Demo
+                  </Link>
                 </Button>
               </div>
             </div>
