@@ -1,7 +1,10 @@
 
+'use client';
+
+import { useState } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
 import { Menu } from 'lucide-react';
 
 const AHLogo = () => (
@@ -24,6 +27,8 @@ const AHLogo = () => (
 );
 
 export function Navbar() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   const navItems = [
     { href: '/home2', label: 'Home' },
     { href: '/restaurants', label: 'Restaurants' },
@@ -62,7 +67,7 @@ export function Navbar() {
           </Button>
         </div>
         
-        <Sheet>
+        <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
           <SheetTrigger asChild>
             <Button variant="outline" size="icon" className="md:hidden">
               <Menu className="h-6 w-6" />
@@ -71,14 +76,17 @@ export function Navbar() {
           </SheetTrigger>
           <SheetContent side="right">
             <div className="grid gap-4 p-4">
-              <Link href="/" className="flex items-center gap-2 mb-4">
-                <AHLogo />
-                <span className="text-xl font-bold text-foreground">Another Head</span>
-              </Link>
+               <div className="mb-4">
+                  <Link href="/" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
+                    <AHLogo />
+                    <span className="text-xl font-bold text-foreground">Another Head</span>
+                  </Link>
+               </div>
               {navItems.map((item) => (
                 <Link
                   key={item.label}
                   href={item.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
                   className="text-lg font-medium text-muted-foreground transition-colors hover:text-foreground"
                 >
                   {item.label}
@@ -86,7 +94,7 @@ export function Navbar() {
               ))}
               <div className="flex flex-col gap-2 mt-4">
                 <Button asChild>
-                  <Link href="/#contact">Schedule a Demo</Link>
+                  <Link href="/#contact" onClick={() => setIsMobileMenuOpen(false)}>Schedule a Demo</Link>
                 </Button>
               </div>
             </div>
