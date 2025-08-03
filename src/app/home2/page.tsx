@@ -19,7 +19,9 @@ import {
   AreaChart,
   Bot,
   TabletSmartphone,
-  PlayCircle
+  PlayCircle,
+  Cloud,
+  Laptop
 } from 'lucide-react';
 import { FloatingSupport } from '@/components/landing/FloatingSupport';
 import { Container } from '@/components/landing/Container';
@@ -77,23 +79,21 @@ export default function Home2Page() {
 
   const pricingPlans = [
     {
-      name: 'Basic',
-      price: '₹999',
-      description: 'For single outlets getting started.',
-      features: ['POS Billing', 'Basic Inventory', 'Standard Reports']
+      icon: Laptop,
+      name: 'Local Setup',
+      price: '₹199',
+      priceSuffix: 'one-time',
+      description: 'Install on your computer, no internet required. Lifetime license for one device.',
+      bestFor: 'Small shops, offline businesses',
     },
     {
-      name: 'Pro',
-      price: '₹1999',
-      description: 'For growing businesses needing more power.',
-      features: ['All Basic Features', 'Advanced Inventory', 'CRM & Loyalty', 'Online Integrations'],
+      icon: Cloud,
+      name: 'Cloud Setup',
+      price: '₹599',
+      priceSuffix: '/month',
+      description: 'Access from any device, anywhere. Includes backup, updates, and support.',
+      bestFor: 'Growing businesses, multi-user access',
       isPopular: true
-    },
-    {
-      name: 'Enterprise',
-      price: 'Custom',
-      description: 'For multi-outlet chains and franchises.',
-      features: ['All Pro Features', 'Multi-Outlet Management', 'Dedicated Support', 'Custom APIs']
     }
   ];
 
@@ -243,32 +243,27 @@ export default function Home2Page() {
       {/* 6. Pricing Section */}
       <Container id="pricing" className="bg-blue-50">
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground">Simple, Transparent Pricing</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground">Simple Pricing – Another Head</h2>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-            Choose a plan that fits your business. No hidden fees.
+             Two Transparent Plans – Any Software, One Price
           </p>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch max-w-4xl mx-auto">
           {pricingPlans.map(plan => (
-            <Card key={plan.name} className={`flex flex-col ${plan.isPopular ? 'border-2 border-primary ring-4 ring-primary/20' : ''}`}>
+            <Card key={plan.name} className={`flex flex-col text-center ${plan.isPopular ? 'border-2 border-primary ring-4 ring-primary/20' : ''}`}>
               <CardHeader>
-                {plan.isPopular && <div className="text-sm font-semibold text-primary text-center mb-2">MOST POPULAR</div>}
-                <CardTitle className="text-2xl font-bold text-center">{plan.name}</CardTitle>
-                <CardDescription className="text-center">
+                <div className="mx-auto bg-primary/10 rounded-full p-3 mb-2">
+                    <plan.icon className="h-8 w-8 text-primary" />
+                </div>
+                <CardTitle className="text-2xl font-bold">{plan.name}</CardTitle>
+                <CardDescription>
                   <span className="text-4xl font-extrabold text-foreground">{plan.price}</span>
-                  {plan.price.startsWith('₹') && <span className="text-muted-foreground"> /mo</span>}
+                  <span className="text-muted-foreground"> {plan.priceSuffix}</span>
                 </CardDescription>
               </CardHeader>
               <CardContent className="flex-grow">
-                <p className="text-center text-muted-foreground mb-6">{plan.description}</p>
-                <ul className="space-y-3">
-                  {plan.features.map(feature => (
-                    <li key={feature} className="flex items-start">
-                      <CheckCircle2 className="h-5 w-5 text-green-500 mr-2 mt-1 shrink-0" />
-                      <span className="text-foreground/80">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+                 <p className="text-muted-foreground mb-4">{plan.description}</p>
+                 <p className="font-semibold text-sm">Best For: <span className="font-normal">{plan.bestFor}</span></p>
               </CardContent>
               <CardFooter>
                 <Button className="w-full" size="lg" variant={plan.isPopular ? 'default' : 'outline'} asChild>
@@ -277,6 +272,17 @@ export default function Home2Page() {
               </CardFooter>
             </Card>
           ))}
+        </div>
+        <div className="mt-12 text-center max-w-3xl mx-auto">
+            <Card className="p-6 bg-card">
+              <h3 className="text-2xl font-bold text-foreground">🛠️ Also Offering Custom Solutions</h3>
+              <p className="mt-2 text-muted-foreground">
+                Need something unique? We create custom software tailored to your business needs — branding, integrations, extra features, and more.
+              </p>
+              <Button size="lg" className="mt-6" asChild>
+                <Link href="#contact">Request Custom Build</Link>
+              </Button>
+            </Card>
         </div>
       </Container>
       
