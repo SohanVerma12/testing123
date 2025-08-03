@@ -6,47 +6,42 @@ import Image from 'next/image';
 import { Navbar } from '@/components/landing/Navbar';
 import { ContactFooter } from '@/components/landing/ContactFooter';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Check, ReceiptText, ShoppingCart, Boxes, Users, BarChart3, CreditCard } from 'lucide-react';
+import { ArrowRight, Check, Utensils, Coffee, Pill, Users, BarChart3, ShieldCheck, Zap } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Container } from '@/components/landing/Container';
 
 export default function HomePage() {
-  const features = [
+  const solutions = [
     {
-      icon: ReceiptText,
-      title: 'Billing & Invoicing',
-      description: 'Streamline your billing process with our fast and intuitive POS system. Generate GST-compliant invoices effortlessly.',
+      icon: Utensils,
+      title: 'Restaurant POS',
+      description: 'Streamline everything from table orders to billing and analytics.',
+      link: '/restaurants',
     },
     {
-      icon: ShoppingCart,
-      title: 'Online Ordering',
-      description: 'Manage orders from Zomato, Swiggy, and your own website, all in one place.',
+      icon: Coffee,
+      title: 'Cafe POS',
+      description: 'Manage quick billing, loyalty programs, and inventory for your bustling cafe.',
+      link: '/cafes',
     },
     {
-      icon: Boxes,
-      title: 'Inventory Management',
-      description: 'Track stock levels in real-time, manage recipes, and reduce wastage with our powerful inventory tools.',
+      icon: Pill,
+      title: 'Medical Shop Software',
+      description: 'Simplify pharmacy operations with powerful inventory and billing tools.',
+      link: '/medical-shops',
     },
     {
       icon: Users,
-      title: 'CRM & Loyalty',
-      description: 'Build customer relationships and run loyalty programs to keep them coming back.',
-    },
-    {
-      icon: BarChart3,
-      title: 'Analytics Dashboard',
-      description: 'Get actionable insights into your sales and business performance with comprehensive reports.',
-    },
-    {
-      icon: CreditCard,
-      title: 'Payment Solutions',
-      description: 'Accept all types of payments, including cards, UPI, and mobile wallets, with integrated payment gateways.',
+      title: 'Payroll Management',
+      description: 'Automate salary processing, compliance, and reporting for your team.',
+      link: '/payroll',
     },
   ];
 
   const testimonials = [
     {
-      quote: "Another Head has revolutionized how we manage our restaurant. The inventory management is a lifesaver!",
+      quote: "Another Head has revolutionized how we manage our business. The software is intuitive and the support is top-notch!",
       name: 'Riya Sharma',
       business: 'Owner, The Curry House',
       avatarSrc: 'https://placehold.co/100x100.png',
@@ -54,20 +49,20 @@ export default function HomePage() {
       avatarHint: 'happy customer restaurant',
     },
     {
-      quote: "The online ordering integration is seamless and has boosted our delivery sales significantly. Highly recommend!",
+      quote: "The switch to Another Head was seamless. It has boosted our efficiency and sales significantly. Highly recommend!",
       name: 'Arjun Mehta',
-      business: 'Manager, Pizza Central',
+      business: 'Manager, Modern Medico',
       avatarSrc: 'https://placehold.co/100x100.png',
       avatarFallback: 'AM',
-      avatarHint: 'cafe owner portrait',
+      avatarHint: 'pharmacist professional portrait',
     },
     {
-      quote: "User-friendly interface and excellent customer support. Another Head is a must-have for any F&B business.",
+      quote: "User-friendly interface and excellent features. Another Head is a must-have for any modern business.",
       name: 'Priya Patel',
       business: 'Founder, Chai Stop Cafe',
       avatarSrc: 'https://placehold.co/100x100.png',
       avatarFallback: 'PP',
-      avatarHint: 'restaurant manager professional',
+      avatarHint: 'cafe owner professional',
     },
   ];
 
@@ -91,10 +86,10 @@ export default function HomePage() {
           </div>
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-foreground">
-              One <span className="text-primary">POS</span> to Manage it All
+              Smart Software for Modern Business
             </h1>
             <p className="mt-6 max-w-3xl mx-auto text-lg sm:text-xl md:text-2xl text-muted-foreground">
-              From billing to inventory, Another Head simplifies every step of running your restaurant.
+              Another Head builds intuitive software for cafes, restaurants, medical shops, and payroll systems — helping businesses run smoother, faster, and better.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button size="lg" className="w-full sm:w-auto px-8 py-3 text-lg font-semibold group" asChild>
@@ -103,52 +98,77 @@ export default function HomePage() {
                 </Link>
               </Button>
               <Button size="lg" variant="outline" className="w-full sm:w-auto px-8 py-3 text-lg font-semibold" asChild>
-                <Link href="#pricing">Get Started Free</Link>
+                <Link href="/pricing">Explore Pricing</Link>
               </Button>
-            </div>
-
-            <div className="mt-12 sm:mt-16 lg:mt-20 relative aspect-[16/9] w-full max-w-6xl mx-auto rounded-2xl shadow-2xl overflow-hidden border border-border/20">
-              <Image
-                src="https://placehold.co/1200x675.png"
-                alt="Another Head Dashboard Illustration"
-                layout="fill"
-                objectFit="cover"
-                data-ai-hint="software dashboard restaurant"
-                className="bg-muted"
-              />
             </div>
           </div>
         </section>
 
-        {/* Features Section */}
-        <section id="features" className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 md:py-32">
+        {/* Solutions Section */}
+        <Container id="solutions" className="py-16 sm:py-24 md:py-32">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-base font-semibold leading-7 text-primary">Everything You Need</h2>
-            <p className="mt-2 text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-foreground">A Fully-Featured Platform</p>
+            <h2 className="text-base font-semibold leading-7 text-primary">Our Solutions</h2>
+            <p className="mt-2 text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-foreground">Software Built for Your Industry</p>
             <p className="mt-6 max-w-2xl mx-auto text-lg leading-8 text-muted-foreground">
-              Another Head offers a comprehensive suite of tools to manage and grow your food business efficiently.
+              We offer tailored solutions designed to meet the unique challenges of your business.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature) => (
-              <Card key={feature.title} className="bg-card border rounded-2xl p-6 text-left transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                <div className="mb-4">
-                  <div className="p-3 rounded-full bg-primary/10 inline-block">
-                    <feature.icon className="h-6 w-6 text-primary" />
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold text-foreground">{feature.title}</h3>
-                <p className="mt-2 text-muted-foreground">{feature.description}</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {solutions.map((solution) => (
+              <Card key={solution.title} className="group relative overflow-hidden rounded-2xl bg-card transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border-border/50 hover:border-primary/20">
+                <CardHeader className="pt-8 relative z-10 items-center text-center">
+                   <div className="p-4 bg-primary/10 rounded-full mb-4 inline-block mx-auto transition-transform duration-300 group-hover:scale-110">
+                      <solution.icon className="h-10 w-10 text-primary" />
+                    </div>
+                  <CardTitle className="text-2xl font-bold text-foreground">{solution.title}</CardTitle>
+                </CardHeader>
+                <CardContent className="text-center relative z-10 px-6 pb-6">
+                  <p className="mt-2 text-muted-foreground">{solution.description}</p>
+                   <Button variant="link" asChild className="mt-4 text-lg">
+                    <Link href={solution.link}>
+                      Learn More <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                </CardContent>
               </Card>
             ))}
           </div>
+        </Container>
+
+        {/* Why Choose Us Section */}
+        <section className="bg-secondary/40 py-16 sm:py-24 md:py-32">
+          <Container className="py-0">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <div className="text-center lg:text-left">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-foreground">The Another Head Advantage</h2>
+                <p className="mt-6 text-lg leading-8 text-muted-foreground">
+                  Our software is more than just features. It's a commitment to simplicity, power, and your success. We handle the complexities of technology so you can focus on what you do best: running your business.
+                </p>
+                <div className="mt-8 flex flex-col gap-4">
+                    <div className="flex items-center gap-4 transition-transform duration-200 hover:translate-x-1"><div className="p-2 rounded-full bg-green-100"><Check className="h-5 w-5 text-green-600" /></div><span className="text-lg font-medium">Intuitive and Easy to Use</span></div>
+                    <div className="flex items-center gap-4 transition-transform duration-200 hover:translate-x-1"><div className="p-2 rounded-full bg-green-100"><Check className="h-5 w-5 text-green-600" /></div><span className="text-lg font-medium">Powerful, Real-Time Analytics</span></div>
+                    <div className="flex items-center gap-4 transition-transform duration-200 hover:translate-x-1"><div className="p-2 rounded-full bg-green-100"><Check className="h-5 w-5 text-green-600" /></div><span className="text-lg font-medium">Dedicated Customer Support</span></div>
+                </div>
+              </div>
+              <div className="relative aspect-square w-full max-w-lg mx-auto">
+                 <Image
+                    src="https://placehold.co/600x600.png"
+                    alt="Abstract software interface illustration"
+                    layout="fill"
+                    objectFit="cover"
+                    data-ai-hint="abstract software ui"
+                    className="rounded-2xl shadow-xl transition-transform duration-300 hover:scale-105"
+                  />
+              </div>
+            </div>
+          </Container>
         </section>
         
         {/* Testimonials Section */}
-        <section id="testimonials" className="bg-secondary/50 py-16 sm:py-24 md:py-32">
+        <section id="testimonials" className="py-16 sm:py-24 md:py-32">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12 sm:mb-16">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-foreground">Loved by Restaurants Everywhere</h2>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-foreground">Loved by Businesses Everywhere</h2>
               <p className="mt-6 max-w-2xl mx-auto text-lg leading-8 text-muted-foreground">
                 Hear what our satisfied clients have to say about Another Head.
               </p>
@@ -176,12 +196,12 @@ export default function HomePage() {
         </section>
 
         {/* Integrations Section */}
-        <section id="integrations" className="py-16 sm:py-24 md:py-32">
+        <section id="integrations" className="bg-secondary/40 py-16 sm:py-24 md:py-32">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12 sm:mb-16">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-foreground">Seamless Integrations</h2>
               <p className="mt-6 max-w-2xl mx-auto text-lg leading-8 text-muted-foreground">
-                Connect Another Head with your favorite tools to streamline operations and enhance customer experience.
+                Connect Another Head with your favorite tools to streamline your entire operation.
               </p>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center">
@@ -202,8 +222,28 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Final CTA Section */}
+        <Container className="text-center py-16 sm:py-24 md:py-32">
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="mt-4 text-xl text-foreground/80 max-w-3xl mx-auto mb-10">
+              Join thousands of successful businesses that trust Another Head to power their growth.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground w-full sm:w-auto px-8 py-3 text-lg font-semibold">
+                <Link href="/#contact">Schedule a Free Demo</Link>
+              </Button>
+              <Button size="lg" variant="outline" asChild className="border-primary text-primary hover:bg-primary/5 w-full sm:w-auto px-8 py-3 text-lg font-semibold">
+                <Link href="/pricing">See Pricing</Link>
+              </Button>
+            </div>
+        </Container>
+
       </main>
       <ContactFooter />
     </div>
   );
 }
+
+    
