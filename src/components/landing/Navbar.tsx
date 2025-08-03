@@ -36,7 +36,7 @@ export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { href: "/home2", label: "Home" },
+    { href: "/", label: "Home" },
     { href: "/restaurants", label: "Restaurants" },
     { href: "/cafes", label: "Cafes" },
     { href: "/medical-shops", label: "Medical Shops" },
@@ -46,6 +46,7 @@ export function Navbar() {
     // { href: '/blog', label: 'Blog' },
     // { href: '/#contact', label: 'Contact' },
   ];
+  
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">

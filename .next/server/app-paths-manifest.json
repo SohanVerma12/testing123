@@ -1,17 +1,5 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/blog/page": "app/blog/page.js",
-  "/about-us/page": "app/about-us/page.js",
-  "/home4/page": "app/home4/page.js",
-  "/cafes/page": "app/cafes/page.js",
   "/home2/page": "app/home2/page.js",
-  "/home3/page": "app/home3/page.js",
-  "/medical-shops/page": "app/medical-shops/page.js",
-  "/industries/page": "app/industries/page.js",
   "/page": "app/page.js",
-  "/payroll/page": "app/payroll/page.js",
-  "/restaurants/page": "app/restaurants/page.js",
-  "/services/page": "app/services/page.js",
-  "/pricing/page": "app/pricing/page.js"
+  "/restaurants/page": "app/restaurants/page.js"
 }
