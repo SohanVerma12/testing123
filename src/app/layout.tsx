@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
@@ -14,8 +15,17 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Another Head Simplified | Restaurant Management Software',
-  description: 'One POS to Manage it All. From billing to inventory, Another Head simplifies every step of running your restaurant.',
+  title: 'Another Head | Smart Software for Cafes, Restaurants & More',
+  description: 'Affordable software solutions for cafes, restaurants, pharmacies, and payroll. Local setup from ₹199 and cloud from ₹599/month. Run your business smarter.',
+  keywords: ['another head', 'cafe software', 'restaurant pos', 'payroll software', 'pharmacy billing', 'cloud pos india'],
+  authors: [{ name: 'Another Head' }],
+  robots: 'index, follow',
+  openGraph: {
+    title: 'Another Head | Smart Business Software',
+    description: 'Run your business smarter — Cafe, Restaurant, Pharmacy, and Payroll solutions in one place.',
+    url: 'https://www.anotherhead.in/', // To be replaced with actual URL
+    type: 'website',
+  },
 };
 
 export default function RootLayout({

@@ -25,6 +25,21 @@ import {
 } from 'lucide-react';
 import { FloatingSupport } from '@/components/landing/FloatingSupport';
 import { Container } from '@/components/landing/Container';
+import type { Metadata } from 'next';
+
+// export const metadata: Metadata = {
+//   title: 'Another Head | Smart Software for Cafes, Restaurants & More',
+//   description: 'Affordable software solutions for cafes, restaurants, pharmacies, and payroll. Local setup ₹199 and cloud ₹599/month.',
+//   keywords: ['another head', 'cafe software', 'restaurant pos', 'payroll software', 'pharmacy billing', 'cloud pos india'],
+//   authors: [{ name: 'Another Head' }],
+//   robots: 'index, follow',
+//   openGraph: {
+//     title: 'Another Head | Smart Business Software',
+//     description: 'Run your business smarter — Cafe, Restaurant, Pharmacy, and Payroll solutions in one place.',
+//     url: 'https://www.anotherhead.in/', // To be replaced with actual URL
+//     type: 'website',
+//   },
+// };
 
 export default function Home2Page() {
   const industries = [

@@ -13,6 +13,12 @@ import {
   Pin, Newspaper, BookOpen, TrendingUp, Mail, Brain, Phone, MessageSquare, CheckCircle2, Edit3, BarChartBig, Users, ShoppingBasket, Wifi, Building 
 } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
+import type { Metadata } from 'next';
+
+// Although this is a client component, we can't export metadata from it.
+// We would place this in a parent layout or page if we needed dynamic metadata.
+// For now, we rely on the root layout's metadata.
+
 
 const featuredArticles = [
   {

@@ -10,6 +10,13 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { 
   Globe, Blocks, MailOpen, Palette, Search, ThumbsUp, CheckCircle2, Phone, Calendar, Settings
 } from 'lucide-react';
+import type { Metadata } from 'next';
+
+// export const metadata: Metadata = {
+//   title: 'Digital Services | Another Head',
+//   description: 'Full-spectrum digital services to power your brand, including web design, blockchain development, email marketing, graphic design, SEO, and SMM.',
+//   keywords: ['web design', 'blockchain development', 'email marketing', 'graphic design', 'seo services', 'social media marketing'],
+// };
 
 const coreServices = [
   {

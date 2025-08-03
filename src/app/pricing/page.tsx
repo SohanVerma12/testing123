@@ -10,6 +10,13 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Check, X, Lightbulb, Zap, Cloud, BarChart3, Phone, Package, Settings, PlayCircle, Quote as QuoteIcon, HelpCircle, Rocket, MessageCircle, ReceiptText, Globe, Link2, CheckCircle2 } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
+import type { Metadata } from 'next';
+
+// export const metadata: Metadata = {
+//   title: 'Pricing Plans | Another Head POS and Business Software',
+//   description: 'Transparent and scalable pricing for every restaurant and business. Choose from Starter, Pro, and Enterprise plans. No hidden fees, no long-term lock-ins.',
+//   keywords: ['another head pricing', 'pos software cost', 'restaurant pos price', 'business software plans'],
+// };
 
 const comparisonFeatures = [
   { feature: 'POS Billing & Invoicing', starter: true, pro: true, enterprise: true },

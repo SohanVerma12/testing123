@@ -13,6 +13,13 @@ import {
   CheckCircle2, Link2 as IntegrationIcon, Quote, MessageSquare, Phone, Lightbulb, Rocket, HelpCircle, Cpu
 } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
+import type { Metadata } from 'next';
+
+// export const metadata: Metadata = {
+//   title: 'Industries We Serve | Another Head POS Solutions',
+//   description: 'Another Head provides tailored POS solutions for every type of food business, including full-service restaurants, cafes, food trucks, cloud kitchens, and QSRs.',
+//   keywords: ['food business pos', 'restaurant types', 'qsr software', 'cafe pos', 'cloud kitchen management'],
+// };
 
 interface IndustryDetail {
   icon: LucideIcon;

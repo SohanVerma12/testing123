@@ -9,6 +9,13 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { CheckCircle2, ArrowRight, Pill, FileText, Package, Search, Bell, Shield, BarChart3 } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import type { Metadata } from 'next';
+
+// export const metadata: Metadata = {
+//   title: 'Pharmacy Management Software | Another Head for Medical Shops',
+//   description: 'All-in-one pharmacy software to manage inventory, billing, and compliance. Simplify your medical shop operations with powerful, easy-to-use tools.',
+//   keywords: ['pharmacy management software', 'medical shop software', 'pharmacy billing software', 'inventory management pharmacy'],
+// };
 
 export default function MedicalShopsPage() {
   const features = [

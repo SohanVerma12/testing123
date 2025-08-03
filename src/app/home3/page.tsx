@@ -11,6 +11,13 @@ import {
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
+import type { Metadata } from 'next';
+
+// export const metadata: Metadata = {
+//   title: 'Advanced Technology Solutions | Another Head',
+//   description: 'Explore our cutting-edge technology stack, including Generative AI, Cloud Native platforms, and high-performance databases to transform your business.',
+//   keywords: ['generative ai', 'cloud native', 'enterprise security', 'high-performance database', 'tech solutions'],
+// };
 
 export default function Home3Page() {
   const techPillars = [

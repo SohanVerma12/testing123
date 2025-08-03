@@ -9,6 +9,13 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, Utensils, Coffee, Pill, Users, Check } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Container } from '@/components/landing/Container';
+import type { Metadata } from 'next';
+
+// export const metadata: Metadata = {
+//   title: 'Another Head | Smart Software for Modern Businesses',
+//   description: 'Another Head builds smart software for cafes, restaurants, medical shops, and payroll systems — helping businesses run smoother, faster, and better.',
+//   keywords: ['business software', 'pos systems', 'cafe software', 'restaurant management', 'pharmacy software', 'payroll system'],
+// };
 
 export default function Home4Page() {
   const products = [

@@ -9,6 +9,13 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { CheckCircle2, ArrowRight, Coffee, Zap, Users, BarChart3, Percent, QrCode } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import type { Metadata } from 'next';
+
+// export const metadata: Metadata = {
+//   title: 'Cafe POS Software | Another Head for Coffee Shops',
+//   description: 'POS software designed for cafes and coffee shops. Manage billing, loyalty, and inventory with ease. Serve your best brew without the backend hassle.',
+//   keywords: ['cafe pos software', 'coffee shop pos', 'cafe billing software', 'another head for cafes'],
+// };
 
 export default function CafesPage() {
   const features = [

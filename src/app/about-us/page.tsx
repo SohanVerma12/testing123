@@ -6,6 +6,14 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { Lightbulb, PlugZap, BarChart3, Heart, Cloud, Rocket, Users, ShieldCheck, Award, Quote, Briefcase, Brain, Target } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'About Another Head | Our Mission and Story',
+  description: 'Learn about Another Head, our mission to empower businesses with smart, intuitive technology, and the values that drive us. Discover our journey and meet the team.',
+  keywords: ['about another head', 'restaurant technology company', 'pos software mission', 'our story'],
+};
+
 
 export default function AboutUsPage() {
   const whyChooseUsItems = [

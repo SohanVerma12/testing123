@@ -9,6 +9,13 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { CheckCircle2, ArrowRight, Utensils, ReceiptText, Boxes, Users, BarChart3, CookingPot } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import type { Metadata } from 'next';
+
+// export const metadata: Metadata = {
+//   title: 'Restaurant POS Software | Another Head for Restaurants',
+//   description: 'The ultimate POS for full-service restaurants. Manage tables, orders, inventory, and online ordering from a single dashboard. Delight your guests and grow your business.',
+//   keywords: ['restaurant pos', 'restaurant management software', 'fine dining pos', 'kot software', 'restaurant billing software'],
+// };
 
 export default function RestaurantsPage() {
   const features = [

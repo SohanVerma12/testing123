@@ -9,6 +9,14 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { CheckCircle2, ArrowRight, Users, Calculator, FileStack, HandCoins, ShieldCheck, Clock } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import type { Metadata } from 'next';
+
+// export const metadata: Metadata = {
+//   title: 'Payroll Management Software | Another Head Payroll',
+//   description: 'Simple, accurate, and compliant payroll software. Automate salary processing, statutory compliance (PF, ESI, TDS), and reporting. Pay employees on time, every time.',
+//   keywords: ['payroll software', 'payroll management system', 'salary software', 'hr payroll software india'],
+// };
+
 
 export default function PayrollPage() {
   const features = [
