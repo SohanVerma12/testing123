@@ -1,0 +1,17 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/favicon.ico/route": "/favicon.ico",
+  "/blog/page": "/blog",
+  "/about-us/page": "/about-us",
+  "/home4/page": "/home4",
+  "/cafes/page": "/cafes",
+  "/home2/page": "/home2",
+  "/home3/page": "/home3",
+  "/medical-shops/page": "/medical-shops",
+  "/industries/page": "/industries",
+  "/page": "/",
+  "/payroll/page": "/payroll",
+  "/restaurants/page": "/restaurants",
+  "/services/page": "/services",
+  "/pricing/page": "/pricing"
+}
