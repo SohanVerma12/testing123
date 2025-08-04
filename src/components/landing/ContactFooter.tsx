@@ -50,6 +50,7 @@ export function ContactFooter() {
     const form = e.target;
     const name = form.name.value.trim();
     const email = form.email.value.trim();
+    const phone = form.phone.value.trim();
     // const businessType = form.businessType.value.trim();
     const message = form.message.value.trim();
 
@@ -63,10 +64,11 @@ export function ContactFooter() {
     formData.append("email", email);
     formData.append("businessType", businessType);
     formData.append("message", message);
+    formData.append("phone",phone);
 
     try {
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbzW9wxSoDbW9lyXT3RmJE2pJsZg69NffeyZLQ_YXoC8vlzMl1vWbd2w0VcqBwkwOVQ/exec",
+        "https://script.google.com/macros/s/AKfycbxgzXhSouWe09xDdGBXbeTJENaK1ssW8YxxR_e0TqMykKq_SaZBcWNbRjlgSyuc9Fc/exec",
         {
           method: "POST",
           body: formData,
@@ -177,30 +179,34 @@ export function ContactFooter() {
                       className="mt-2"
                     />
                   </div>
+                  <div>
+  <Label htmlFor="phone" className="text-foreground/90">
+    Phone Number
+  </Label>
+  <Input
+    type="phone"
+    id="phone"
+    name="phone"
+    required
+    className="mt-2"
+    pattern="[0-9]{10}" // Optional: basic validation for 10-digit numbers
+    placeholder="e.g. 1234567890"
+  />
+</div>
+
                 </div>
                 <div>
-                  {/* <Label htmlFor="businessType" className="text-foreground/90">Business Type</Label>
-                <Select name="businessType">
-                  <SelectTrigger id="businessType" className="mt-2">
-                    <SelectValue placeholder="Select business type" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="restaurant">Restaurant</SelectItem>
-                    <SelectItem value="cafe">Café</SelectItem>
-                    <SelectItem value="food_truck">Food Truck</SelectItem>
-                    <SelectItem value="cloud_kitchen">Cloud Kitchen</SelectItem>
-                    <SelectItem value="qsr">QSR</SelectItem>
-                    <SelectItem value="other">Other</SelectItem>
-                  </SelectContent>
-                </Select> */}
                   <div>
-                    <Label htmlFor="businessType" className="text-foreground/90">
+                    <Label
+                      htmlFor="businessType"
+                      className="text-foreground/90"
+                    >
                       Business Type
                     </Label>
                     <Select onValueChange={(value) => setBusinessType(value)}>
                       <SelectTrigger
                         id="businessType"
-                        className="mt-2  border-gray-600 text-white focus:ring-primary focus:border-primary"
+                        className="mt-2  border-gray-600 text-black focus:ring-primary focus:border-primary"
                       >
                         <SelectValue placeholder="Select business type" />
                       </SelectTrigger>
@@ -208,6 +214,7 @@ export function ContactFooter() {
                         <SelectItem value="restaurant">Restaurant</SelectItem>
                         <SelectItem value="cafe">Café</SelectItem>
                         <SelectItem value="food_truck">Food Truck</SelectItem>
+                        <SelectItem value="medical_shop">Medical Shop</SelectItem>
                         <SelectItem value="cloud_kitchen">
                           Cloud Kitchen
                         </SelectItem>
