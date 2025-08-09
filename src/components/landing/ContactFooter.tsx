@@ -64,7 +64,7 @@ export function ContactFooter() {
     formData.append("email", email);
     formData.append("businessType", businessType);
     formData.append("message", message);
-    formData.append("phone",phone);
+    formData.append("phone", phone);
 
     try {
       const response = await fetch(
@@ -180,20 +180,19 @@ export function ContactFooter() {
                     />
                   </div>
                   <div>
-  <Label htmlFor="phone" className="text-foreground/90">
-    Phone Number
-  </Label>
-  <Input
-    type="phone"
-    id="phone"
-    name="phone"
-    required
-    className="mt-2"
-    pattern="[0-9]{10}" // Optional: basic validation for 10-digit numbers
-    placeholder="e.g. 1234567890"
-  />
-</div>
-
+                    <Label htmlFor="phone" className="text-foreground/90">
+                      Phone Number
+                    </Label>
+                    <Input
+                      type="phone"
+                      id="phone"
+                      name="phone"
+                      required
+                      className="mt-2"
+                      pattern="[0-9]{10}" // Optional: basic validation for 10-digit numbers
+                      placeholder="e.g. 1234567890"
+                    />
+                  </div>
                 </div>
                 <div>
                   <div>
@@ -214,7 +213,9 @@ export function ContactFooter() {
                         <SelectItem value="restaurant">Restaurant</SelectItem>
                         <SelectItem value="cafe">Café</SelectItem>
                         <SelectItem value="food_truck">Food Truck</SelectItem>
-                        <SelectItem value="medical_shop">Medical Shop</SelectItem>
+                        <SelectItem value="medical_shop">
+                          Medical Shop
+                        </SelectItem>
                         <SelectItem value="cloud_kitchen">
                           Cloud Kitchen
                         </SelectItem>
@@ -252,13 +253,13 @@ export function ContactFooter() {
           </p>
           <div className="flex space-x-4 mt-4 sm:mt-0">
             <Link
-              href="#"
+              href="/privacy-policy"
               className="text-sm text-muted-foreground hover:text-foreground"
             >
               Privacy Policy
             </Link>
             <Link
-              href="#"
+              href="/terms-and-conditions"
               className="text-sm text-muted-foreground hover:text-foreground"
             >
               Terms of Service
